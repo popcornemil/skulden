@@ -5,6 +5,7 @@ import TwoColumns from './components/TwoColumns'
 import OneColumn from './components/OneColumn'
 import DashboardMockup from './components/DashboardMockup'
 import ThreeColumns from './components/ThreeColumns'
+import HubSection from './components/HubSection'
 import ThreeColumns2 from './components/ThreeColumns2'
 import TwoColumns2 from './components/TwoColumns2'
 import LogoCarousel from './components/LogoCarousel'
@@ -37,6 +38,7 @@ export default function App() {
         </div>
       </section>
       <ThreeColumns2 />
+      <HubSection />
       <TwoColumns2 />
       <Footer />
     </div>
