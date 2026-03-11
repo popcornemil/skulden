@@ -8,8 +8,8 @@ export default function Hero2() {
   }, [])
 
   return (
-    <section className="bg-[#fcfbf9] pt-20">
-      <div className="max-w-[1200px] mx-auto w-full h-[500px] flex flex-col justify-between p-[50px] relative">
+    <section className="bg-[#fcfbf9] pt-16 md:pt-20">
+      <div className="max-w-[1200px] mx-auto w-full min-h-[300px] md:h-[500px] flex flex-col justify-between p-6 md:p-[50px] relative">
         {/* Left line */}
         <div className="absolute left-0 top-[10px] bottom-[10px] w-px bg-black/7" />
         {/* Right line */}
@@ -25,7 +25,7 @@ export default function Hero2() {
           </div>
 
           {/* Heading */}
-          <h1 className={`font-serif text-[64px] font-light text-midnight leading-[1.05] tracking-tight max-w-[900px] transition-all duration-1000 delay-200 ${
+          <h1 className={`font-serif text-[32px] md:text-[48px] lg:text-[64px] font-light text-midnight leading-[1.05] tracking-tight max-w-[900px] transition-all duration-1000 delay-200 ${
             loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
             AI Infrastructure<br />for the Future of Retail
@@ -33,7 +33,7 @@ export default function Hero2() {
         </div>
 
         {/* Book demo button at bottom */}
-        <div className={`transition-all duration-1000 delay-500 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`mt-8 md:mt-0 transition-all duration-1000 delay-500 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <a
             href="#contact"
             className="group inline-block bg-midnight text-white rounded-full hover:bg-midnight/90 transition-all duration-500"
@@ -43,7 +43,7 @@ export default function Hero2() {
               <span className="w-10 h-10 rounded-full bg-gold flex items-center justify-center shrink-0 absolute left-0 group-hover:left-[calc(100%-40px)] transition-all duration-500 z-10">
                 <span className="text-lg text-midnight">&rarr;</span>
               </span>
-              <span className="font-serif text-[20px] font-medium pl-[52px] pr-2 group-hover:pl-2 group-hover:pr-[52px] transition-all duration-500">Explore the ecosystem</span>
+              <span className="font-serif text-[16px] md:text-[20px] font-medium pl-[52px] pr-2 group-hover:pl-2 group-hover:pr-[52px] transition-all duration-500">Explore the ecosystem</span>
             </span>
           </a>
         </div>

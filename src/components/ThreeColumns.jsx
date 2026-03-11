@@ -10,11 +10,13 @@ const cells = [
 export default function ThreeColumns() {
   return (
     <section className="bg-[#fcfbf9]">
-      <div className="max-w-[1200px] mx-auto w-full grid grid-cols-3 group/grid">
+      <div className="max-w-[1200px] mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 group/grid">
         {cells.map((cell, i) => (
-          <div key={i} className="relative p-[50px] transition-opacity duration-500 group-hover/grid:opacity-50 hover:!opacity-100">
-            {/* Left line (only first column) */}
-            {i % 3 === 0 && <div className="absolute left-0 top-[10px] bottom-[10px] w-px bg-black/7" />}
+          <div key={i} className="relative p-6 md:p-[50px] transition-opacity duration-500 group-hover/grid:opacity-50 hover:!opacity-100">
+            {/* Left line (first column) */}
+            {i % 3 === 0 && <div className="hidden lg:block absolute left-0 top-[10px] bottom-[10px] w-px bg-black/7" />}
+            {i % 2 === 0 && <div className="hidden md:block lg:hidden absolute left-0 top-[10px] bottom-[10px] w-px bg-black/7" />}
+            <div className="md:hidden absolute left-0 top-[10px] bottom-[10px] w-px bg-black/7" />
             {/* Right line */}
             <div className="absolute right-0 top-[10px] bottom-[10px] w-px bg-black/7" />
             {/* Bottom line */}

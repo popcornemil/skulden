@@ -26,8 +26,8 @@ export default function App() {
       <TwoColumns />
       <OneColumn />
       <ThreeColumns />
-      <section className="bg-[#fcfbf9]">
-        <div className="max-w-[1200px] mx-auto w-full relative p-[50px]">
+      <section className="bg-[#fcfbf9] hidden md:block">
+        <div className="max-w-[1200px] mx-auto w-full relative p-6 md:p-[50px]">
           <div className="absolute left-0 top-[10px] bottom-[10px] w-px bg-black/7" />
           <div className="absolute right-0 top-[10px] bottom-[10px] w-px bg-black/7" />
           <div className="absolute bottom-0 left-[10px] right-[10px] h-px bg-black/7" />

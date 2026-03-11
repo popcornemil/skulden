@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="bg-[#fcfbf9]">
       <div className="max-w-[1200px] mx-auto w-full">
         {/* Logo row */}
-        <div className="relative p-[50px] flex justify-center">
+        <div className="relative p-6 md:p-[50px] flex justify-center">
           <div className="absolute left-0 top-[10px] bottom-[10px] w-px bg-black/7" />
           <div className="absolute right-0 top-[10px] bottom-[10px] w-px bg-black/7" />
           <div className="absolute bottom-0 left-[10px] right-[10px] h-px bg-black/7" />
@@ -11,21 +11,21 @@ export default function Footer() {
             <img
               src="/logo-nopayoff-gold.png"
               alt="Axxe"
-              className="h-14 w-auto"
+              className="h-10 md:h-14 w-auto"
               style={{ filter: 'brightness(0)' }}
             />
-            <p className="font-serif text-[16px] text-midnight/40">Technology for the physical world.</p>
+            <p className="font-serif text-[14px] md:text-[16px] text-midnight/40 text-center">Technology for the physical world.</p>
           </div>
         </div>
 
         {/* Links row */}
-        <div className="relative p-[50px]">
+        <div className="relative p-6 md:p-[50px]">
           <div className="absolute left-0 top-[10px] bottom-[10px] w-px bg-black/7" />
           <div className="absolute right-0 top-[10px] bottom-[10px] w-px bg-black/7" />
           <div className="absolute bottom-0 left-[10px] right-[10px] h-px bg-black/7" />
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between md:gap-8">
             {/* Links */}
-            <div className="flex flex-wrap items-center justify-center gap-8">
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
               {['Privacy Policy', 'Terms of Service', 'Cookie Settings'].map(link => (
                 <a
                   key={link}
@@ -53,7 +53,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright row */}
-        <div className="relative px-[50px] py-6">
+        <div className="relative px-6 md:px-[50px] py-6">
           <div className="absolute left-0 top-[10px] bottom-[10px] w-px bg-black/7" />
           <div className="absolute right-0 top-[10px] bottom-[10px] w-px bg-black/7" />
           <p className="text-midnight/20 text-xs font-light tracking-wide text-center">

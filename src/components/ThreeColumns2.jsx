@@ -16,10 +16,11 @@ const cells = [
 export default function ThreeColumns2() {
   return (
     <section className="bg-[#fcfbf9]">
-      <div className="max-w-[1200px] mx-auto w-full grid grid-cols-3">
+      <div className="max-w-[1200px] mx-auto w-full grid grid-cols-1 md:grid-cols-3">
         {cells.map((cell, i) => (
-          <div key={i} className="relative p-[50px]">
-            {i === 0 && <div className="absolute left-0 top-[10px] bottom-[10px] w-px bg-black/7" />}
+          <div key={i} className="relative p-6 md:p-[50px]">
+            {i === 0 && <div className="hidden md:block absolute left-0 top-[10px] bottom-[10px] w-px bg-black/7" />}
+            <div className="md:hidden absolute left-0 top-[10px] bottom-[10px] w-px bg-black/7" />
             <div className="absolute right-0 top-[10px] bottom-[10px] w-px bg-black/7" />
             <div className="absolute bottom-0 left-[10px] right-[10px] h-px bg-black/7" />
 
