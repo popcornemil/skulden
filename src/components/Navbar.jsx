@@ -19,7 +19,7 @@ export default function Navbar() {
         <div className="absolute right-0 top-[10px] bottom-0 w-px bg-black/7" />
 
         {/* Center logo — true center of navbar */}
-        <Link to="/" className="absolute left-1/2 -translate-x-1/2 flex items-center">
+        <Link to="/" className="absolute left-1/2 -translate-x-1/2 flex items-center z-10">
           <img
             src="/logo-nopayoff-gold.png"
             alt="Axxe"

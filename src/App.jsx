@@ -6,6 +6,9 @@ import Screen from './pages/Screen'
 import Play from './pages/Play'
 import Cloud from './pages/Cloud'
 import Revenue from './pages/Revenue'
+import Invest from './pages/Invest'
+import AI from './pages/AI'
+import About from './pages/About'
 
 export default function App() {
   return (
@@ -19,6 +22,9 @@ export default function App() {
           <Route path="/play" element={<Frame />} />
           <Route path="/cloud" element={<Cloud />} />
           <Route path="/revenue" element={<Revenue />} />
+          <Route path="/invest" element={<Invest />} />
+          <Route path="/ai" element={<AI />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </BrowserRouter>
