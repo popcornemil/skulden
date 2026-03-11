@@ -5,6 +5,7 @@ import TwoColumns from './components/TwoColumns'
 import OneColumn from './components/OneColumn'
 import DashboardMockup from './components/DashboardMockup'
 import ThreeColumns from './components/ThreeColumns'
+import AISection from './components/AISection'
 import HubSection from './components/HubSection'
 import ThreeColumns2 from './components/ThreeColumns2'
 import TwoColumns2 from './components/TwoColumns2'
@@ -27,6 +28,7 @@ export default function App() {
       <TwoColumns />
       <OneColumn />
       <ThreeColumns />
+
       <section className="bg-[#fcfbf9] hidden md:block">
         <div className="max-w-[1200px] mx-auto w-full relative p-6 md:p-[50px]">
           <div className="absolute left-0 top-[10px] bottom-[10px] w-px bg-black/7" />
@@ -39,6 +41,7 @@ export default function App() {
       </section>
       <ThreeColumns2 />
       <HubSection />
+      <AISection />
       <TwoColumns2 />
       <Footer />
     </div>

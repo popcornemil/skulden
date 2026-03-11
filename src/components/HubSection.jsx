@@ -1,4 +1,8 @@
+import { useScrollReveal } from '../hooks/useScrollReveal'
+
 export default function HubSection() {
+  const [ref, isVisible] = useScrollReveal()
+
   const inputs = [
     { icon: '▣', label: 'Displays' },
     { icon: '◎', label: 'Locations' },
@@ -12,7 +16,7 @@ export default function HubSection() {
   ]
 
   return (
-    <section className="bg-[#fcfbf9]">
+    <section className="bg-[#fcfbf9]" ref={ref}>
       <style>{`
         @keyframes pulseRight {
           0% { left: 0; opacity: 0; }
@@ -55,19 +59,19 @@ export default function HubSection() {
 
         {/* Heading */}
         <div className="text-center mb-[25px]">
-          <h2 className="font-serif text-[32px] md:text-[48px] lg:text-[56px] font-light text-midnight leading-tight">
+          <h2 className={`font-serif text-[32px] md:text-[48px] lg:text-[56px] font-light text-midnight leading-tight transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Every signal. One intelligence.
           </h2>
-          <h2 className="font-serif text-[32px] md:text-[48px] lg:text-[56px] italic text-gold leading-tight">
+          <h2 className={`font-serif text-[32px] md:text-[48px] lg:text-[56px] italic text-gold leading-tight transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             AI at the core.
           </h2>
-          <p className="font-serif text-[16px] text-midnight/50 mt-4">
+          <p className={`font-serif text-[16px] text-midnight/50 mt-4 transition-all duration-1000 delay-[400ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Axxe AI processes every data point across your retail ecosystem.
           </p>
         </div>
 
         {/* Hub diagram — desktop */}
-        <div className="hidden md:block relative" style={{ height: '420px' }}>
+        <div className={`hidden md:block relative transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`} style={{ height: '420px' }}>
           {/* Center hub */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             <div className="group/hub w-[260px] h-[260px] rounded-full border border-black/8 bg-gradient-to-b from-black/3 to-transparent flex items-center justify-center relative cursor-default">
@@ -118,10 +122,9 @@ export default function HubSection() {
           {/* Left cards + lines */}
           {inputs.map((item, i) => {
             const topPositions = ['40px', '190px', '340px']
-            const delays = [0, 0.8, 1.6]
             const rotations = ['20deg', '0deg', '-20deg']
             return (
-              <div key={item.label} className="absolute left-0" style={{ top: topPositions[i] }}>
+              <div key={item.label} className={`absolute left-0 transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`} style={{ top: topPositions[i], transitionDelay: `${600 + i * 150}ms` }}>
                 <div className="flex items-center">
                   <div className="bg-white rounded-xl shadow-sm border border-black/5 px-5 py-3 flex items-center gap-3">
                     <span className="text-midnight/40 text-sm">{item.icon}</span>
@@ -149,7 +152,7 @@ export default function HubSection() {
             const topPositions = ['40px', '190px', '340px']
             const rotations = ['-20deg', '0deg', '20deg']
             return (
-              <div key={item.label} className="absolute right-0" style={{ top: topPositions[i] }}>
+              <div key={item.label} className={`absolute right-0 transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`} style={{ top: topPositions[i], transitionDelay: `${600 + i * 150}ms` }}>
                 <div className="flex items-center">
                   <div
                     className="h-px bg-black/10 relative overflow-hidden"
@@ -174,7 +177,7 @@ export default function HubSection() {
         </div>
 
         {/* Hub diagram — mobile */}
-        <div className="md:hidden">
+        <div className={`md:hidden transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
           <div className="flex justify-center mb-10">
             <div className="w-[160px] h-[160px] rounded-full border border-black/8 bg-gradient-to-b from-black/3 to-transparent flex items-center justify-center relative">
                   <svg className="absolute w-[180px] h-[180px] opacity-[0.07]" style={{ marginTop: '-3px' }} viewBox="0 0 140 140" fill="none">

@@ -1,3 +1,5 @@
+import { useScrollReveal } from '../hooks/useScrollReveal'
+
 const cells = [
   {
     title: 'Physical Spaces\nAre Becoming Digital',
@@ -14,11 +16,13 @@ const cells = [
 ]
 
 export default function ThreeColumns2() {
+  const [ref, isVisible] = useScrollReveal()
+
   return (
-    <section className="bg-[#fcfbf9]">
+    <section className="bg-[#fcfbf9]" ref={ref}>
       <div className="max-w-[1200px] mx-auto w-full grid grid-cols-1 md:grid-cols-3">
         {cells.map((cell, i) => (
-          <div key={i} className="relative p-6 md:p-[50px]">
+          <div key={i} className={`relative p-6 md:p-[50px] transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: `${i * 150}ms` }}>
             {i === 0 && <div className="hidden md:block absolute left-0 top-[10px] bottom-[10px] w-px bg-black/7" />}
             <div className="md:hidden absolute left-0 top-[10px] bottom-[10px] w-px bg-black/7" />
             <div className="absolute right-0 top-[10px] bottom-[10px] w-px bg-black/7" />

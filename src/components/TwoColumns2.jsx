@@ -1,16 +1,20 @@
+import { useScrollReveal } from '../hooks/useScrollReveal'
+
 export default function TwoColumns2() {
+  const [ref, isVisible] = useScrollReveal()
+
   return (
-    <section className="bg-[#fcfbf9]">
+    <section className="bg-[#fcfbf9]" ref={ref}>
       <div className="max-w-[1200px] mx-auto w-full grid grid-cols-1 md:grid-cols-2">
         <div className="relative p-6 md:p-[50px]">
           <div className="absolute left-0 top-[10px] bottom-[10px] w-px bg-black/7" />
           <div className="absolute right-0 top-[10px] bottom-[10px] w-px bg-black/7" />
           <div className="absolute bottom-0 left-[10px] right-[10px] h-px bg-black/7" />
-          <p className="font-serif text-sm font-medium text-midnight mb-4">Get In Touch</p>
-          <h2 className="font-serif text-[32px] md:text-[48px] font-light text-midnight leading-tight mb-4">Join the Next Generation<br />of Retail Technology</h2>
-          <p className="font-serif text-[16px] text-midnight/60">The future of retail is connected, intelligent, and digital.<br />Axxe is building the infrastructure that powers it.</p>
+          <p className={`font-serif text-sm font-medium text-midnight mb-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Get In Touch</p>
+          <h2 className={`font-serif text-[32px] md:text-[48px] font-light text-midnight leading-tight mb-4 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Join the Next Generation<br />of Retail Technology</h2>
+          <p className={`font-serif text-[16px] text-midnight/60 transition-all duration-1000 delay-[400ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>The future of retail is connected, intelligent, and digital.<br />Axxe is building the infrastructure that powers it.</p>
         </div>
-        <div className="relative p-6 md:p-[50px]">
+        <div className={`relative p-6 md:p-[50px] transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="hidden md:block absolute right-0 top-[10px] bottom-[10px] w-px bg-black/7" />
           <div className="absolute left-0 md:hidden top-[10px] bottom-[10px] w-px bg-black/7" />
           <div className="absolute right-0 top-[10px] bottom-[10px] w-px bg-black/7" />
