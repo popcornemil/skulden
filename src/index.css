@@ -7,6 +7,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Roobert';
+  src: url('/fonts/RoobertTRIAL-Medium.otf') format('opentype');
+  font-weight: 480;
+  font-style: normal;
+}
+
 @theme {
   --color-gold: #C5A55A;
   --color-gold-light: #D4B96E;
@@ -18,7 +25,7 @@
   --color-ivory: #F5F0E8;
   --color-warm-gray: #2A2A2A;
 
-  --font-serif: 'Neue Haas Grotesk Display', 'Inter', system-ui, sans-serif;
+  --font-serif: 'Roobert', 'Neue Haas Grotesk Display', 'Inter', system-ui, sans-serif;
   --font-sans: 'Neue Haas Grotesk Display', 'Inter', system-ui, sans-serif;
 }
 

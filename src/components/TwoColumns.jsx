@@ -1,0 +1,24 @@
+export default function TwoColumns() {
+  return (
+    <section className="bg-[#fcfbf9]">
+      <div className="max-w-[1200px] mx-auto w-full grid grid-cols-2">
+        <div className="relative p-[50px]">
+          {/* Left line */}
+          <div className="absolute left-0 top-[10px] bottom-[10px] w-px bg-black/7" />
+          {/* Right line */}
+          <div className="absolute right-0 top-[10px] bottom-[10px] w-px bg-black/7" />
+          {/* Bottom line */}
+          <div className="absolute bottom-0 left-[10px] right-[10px] h-px bg-black/7" />
+          <p className="font-serif text-[22px] text-midnight">One connected platform.</p>
+        </div>
+        <div className="relative p-[50px]">
+          {/* Right line */}
+          <div className="absolute right-0 top-[10px] bottom-[10px] w-px bg-black/7" />
+          {/* Bottom line */}
+          <div className="absolute bottom-0 left-[10px] right-[10px] h-px bg-black/7" />
+          <p className="font-serif text-[16px] text-midnight">Axxe builds the infrastructure powering the next generation of retail experiences.<br />Displays.<br />Software.<br />Intelligence.</p>
+        </div>
+      </div>
+    </section>
+  )
+}
