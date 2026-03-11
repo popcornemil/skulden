@@ -20,7 +20,7 @@ export default function Hero2() {
           {/* Tagline */}
           <div className={`mb-4 transition-all duration-1000 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <p className="font-serif text-sm font-medium text-midnight">
-              Powering Retail Tech
+              Unlocking new revenue
             </p>
           </div>
 
