@@ -13,7 +13,7 @@ export default function OneColumn() {
         {/* Bottom line */}
         <div className="absolute bottom-0 left-[10px] right-[10px] h-px bg-black/7" />
 
-        <h2 className={`font-serif text-[32px] md:text-[48px] lg:text-[64px] font-light text-midnight mb-4 text-center leading-[1.05] transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Intelligence for the<br />Next Generation of Retail</h2>
+        <h2 className={`font-serif text-[32px] md:text-[48px] lg:text-[64px] font-light text-midnight mb-4 text-center leading-[1.05] transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Intelligence for the<br />Next Generation of Retail Tech</h2>
         <p className={`font-serif text-[16px] text-midnight/60 text-center px-[200px] transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}><span className="font-bold">Axxe AI™</span> brings intelligence to physical spaces. By combining displays, data, AI, and real-world environments, Axxe AI™ enables brands and retailers to create smarter, more adaptive customer experiences. From automated content optimization to real-time insights, Axxe AI™ turns every screen into a dynamic and intelligent media surface.</p>
         <div className={`mt-4 flex justify-center transition-all duration-1000 delay-[400ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <a
