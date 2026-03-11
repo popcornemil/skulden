@@ -28,25 +28,18 @@ export default function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       scrolled ? 'bg-midnight/95 backdrop-blur-md border-b border-gold/10' : 'bg-midnight'
     }`}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20">
+      <div className="w-full px-[10px] flex items-center justify-between h-20">
 
         {/* Desktop */}
-        <div className="hidden lg:flex items-center justify-between w-full">
-          {/* Left links */}
-          <div className="flex items-center justify-end gap-6 flex-1">
-            {leftLinks.map(l => (
-              <a
-                key={l.href}
-                href={l.href}
-                className="text-xs font-medium tracking-[0.2em] uppercase text-white/70 hover:text-gold transition-colors duration-300"
-              >
-                {l.label}
-              </a>
-            ))}
+        <div className="hidden lg:flex items-center w-full relative">
+          {/* Far left links */}
+          <div className="flex items-center gap-6">
+            <a href="#" className="text-xs font-medium tracking-[0.2em] uppercase text-white/70 hover:text-gold transition-colors duration-300">AI</a>
+            <a href="#" className="text-xs font-medium tracking-[0.2em] uppercase text-white/70 hover:text-gold transition-colors duration-300">Marketplace</a>
           </div>
 
-          {/* Center logo */}
-          <a href="#" className="flex items-center mx-6">
+          {/* Center logo — absolute center */}
+          <a href="#" className="absolute left-1/2 -translate-x-1/2 flex items-center">
             <img
               src="/logo-nopayoff-gold.png"
               alt="Axxe"
@@ -55,27 +48,17 @@ export default function Navbar() {
           </a>
 
           {/* Right links */}
-          <div className="flex items-center justify-start gap-6 flex-1">
-            {rightLinks.map(l => (
-              <a
-                key={l.href}
-                href={l.href}
-                className="text-xs font-medium tracking-[0.2em] uppercase text-white/70 hover:text-gold transition-colors duration-300"
-              >
-                {l.label}
-              </a>
-            ))}
+          <div className="flex items-center gap-6 ml-auto">
+            <a href="#about" className="text-xs font-medium tracking-[0.2em] uppercase text-white/70 hover:text-gold transition-colors duration-300">Invest</a>
+            <a href="#contact" className="text-xs font-medium tracking-[0.2em] uppercase text-white/70 hover:text-gold transition-colors duration-300">About</a>
+            <a
+              href="#contact"
+              className="px-5 py-2 bg-gold text-midnight text-[10px] font-semibold tracking-[0.2em] uppercase rounded-full hover:bg-gold-light transition-all duration-300"
+            >
+              Book Demo
+            </a>
           </div>
-
         </div>
-
-        {/* Book Demo - absolute right */}
-        <a
-          href="#contact"
-          className="hidden lg:block absolute right-6 lg:right-12 px-5 py-2 bg-gold text-midnight text-[10px] font-semibold tracking-[0.2em] uppercase hover:bg-gold-light transition-all duration-300"
-        >
-          Book Demo
-        </a>
 
         {/* Mobile logo */}
         <a href="#" className="flex items-center lg:hidden">

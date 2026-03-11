@@ -79,7 +79,7 @@ export default function Properties() {
           {properties.map((prop) => (
             <div
               key={prop.title}
-              className="group bg-midnight border border-white/5 hover:border-gold/20 overflow-hidden transition-all duration-500 cursor-pointer"
+              className="group bg-midnight border border-white/5 hover:border-gold/20 overflow-hidden rounded-[25px] transition-all duration-500 cursor-pointer"
             >
               {/* Image */}
               <div className="relative aspect-[4/3] overflow-hidden">

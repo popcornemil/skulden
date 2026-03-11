@@ -49,7 +49,7 @@ export default function BuyingGuide() {
           {cards.map((card, i) => (
             <div
               key={card.title}
-              className="group relative p-8 border border-white/5 hover:border-gold/20 bg-midnight/50 transition-all duration-500"
+              className="group relative p-8 border border-white/5 hover:border-gold/20 bg-midnight/50 rounded-[25px] transition-all duration-500"
             >
               <span className="absolute top-6 right-6 font-serif text-5xl font-light text-white/5 group-hover:text-gold/10 transition-colors duration-500">
                 {String(i + 1).padStart(2, '0')}

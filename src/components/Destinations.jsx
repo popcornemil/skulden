@@ -93,7 +93,7 @@ function DestinationCard({ dest, index }) {
       }`}
     >
       {/* Image */}
-      <div className={`relative overflow-hidden aspect-[4/3] ${isRight ? 'lg:order-2' : ''}`}>
+      <div className={`relative overflow-hidden rounded-[25px] aspect-[4/3] ${isRight ? 'lg:order-2' : ''}`}>
         <img
           src={dest.image}
           alt={dest.city}

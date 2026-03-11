@@ -4,7 +4,7 @@ export default function Contact() {
   const [ref, isVisible] = useScrollReveal(0.15)
 
   return (
-    <section id="contact" className="py-32 px-6 lg:px-12 bg-charcoal relative overflow-hidden">
+    <section id="contact" className="py-[100px] px-6 lg:px-12 bg-[#141414] relative overflow-hidden">
       {/* Background texture */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -21,7 +21,7 @@ export default function Contact() {
           }`}
         >
           <p className="text-gold text-xs tracking-[0.3em] uppercase mb-4">Get In Touch</p>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light mb-6">
+          <h2 className="font-serif text-[48px] font-light mb-6">
             Join the Next Generation
             <br />of <span className="italic text-gold">Retail Technology</span>
           </h2>
@@ -98,7 +98,7 @@ export default function Contact() {
           <div className="pt-6 text-center">
             <button
               type="submit"
-              className="px-16 py-4 bg-gold text-midnight text-xs font-semibold tracking-[0.25em] uppercase hover:bg-gold-light transition-all duration-300"
+              className="px-16 py-4 bg-gold text-midnight text-xs font-semibold tracking-[0.25em] uppercase rounded-[10px] hover:bg-gold-light transition-all duration-300"
             >
               Get In Touch
             </button>

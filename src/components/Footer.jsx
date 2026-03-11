@@ -2,21 +2,23 @@ export default function Footer() {
   return (
     <footer className="py-16 px-6 lg:px-12 bg-midnight border-t border-white/5">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-          {/* Logo */}
+        {/* Logo */}
+        <div className="flex justify-center mb-12">
           <img
             src="/logo-nopayoff-gold.png"
             alt="Axxe"
-            className="h-6 w-auto opacity-60"
+            className="w-full max-w-4xl"
           />
+        </div>
 
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 max-w-4xl mx-auto">
           {/* Links */}
           <div className="flex flex-wrap items-center justify-center gap-8">
             {['Privacy Policy', 'Terms of Service', 'Cookie Settings'].map(link => (
               <a
                 key={link}
                 href="#"
-                className="text-white/30 text-xs tracking-[0.1em] hover:text-gold transition-colors duration-300"
+                className="text-white/30 text-xs tracking-[0.1em] uppercase hover:text-gold transition-colors duration-300"
               >
                 {link}
               </a>

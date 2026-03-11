@@ -1,5 +1,9 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import LogoCarousel from './components/LogoCarousel'
+import Solutions from './components/Solutions'
+import Platform from './components/Platform'
+import Solutions2 from './components/Solutions2'
 import Cities from './components/Cities'
 import BuyingGuide from './components/BuyingGuide'
 
@@ -12,9 +16,10 @@ export default function App() {
     <div className="min-h-screen bg-midnight text-white">
       <Navbar />
       <Hero />
-      <Cities />
-      <BuyingGuide />
-      <About />
+      <LogoCarousel />
+      <Solutions />
+      <Platform />
+      <Solutions2 />
       <Contact />
       <Footer />
     </div>

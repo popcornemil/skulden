@@ -24,7 +24,7 @@ export default function About() {
         >
           {/* Image side */}
           <div className="relative">
-            <div className="aspect-[3/4] overflow-hidden">
+            <div className="aspect-[3/4] overflow-hidden rounded-[25px]">
               <img
                 src="/invest.jpeg"
                 alt="Axxe Invest"

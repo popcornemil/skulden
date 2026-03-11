@@ -60,7 +60,7 @@ export default function Cities() {
           {products.map((product) => (
             <div
               key={product.name}
-              className="group relative aspect-[4/5] overflow-hidden cursor-pointer"
+              className="group relative aspect-[4/5] overflow-hidden rounded-[25px] cursor-pointer"
             >
               <img
                 src={product.image}
