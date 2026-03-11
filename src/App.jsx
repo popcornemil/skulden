@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import PasswordGate from './components/PasswordGate'
 import Navbar from './components/Navbar'
 import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
@@ -15,22 +16,24 @@ import Studio from './pages/Studio'
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-midnight text-white">
-        <ScrollToTop />
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/frame" element={<Play />} />
-          <Route path="/screen" element={<Screen />} />
-          <Route path="/play" element={<Frame />} />
-          <Route path="/cloud" element={<Cloud />} />
-          <Route path="/revenue" element={<Revenue />} />
-          <Route path="/invest" element={<Invest />} />
-          <Route path="/ai" element={<AI />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/studio" element={<Studio />} />
-        </Routes>
-      </div>
+      <PasswordGate>
+        <div className="min-h-screen bg-midnight text-white">
+          <ScrollToTop />
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/frame" element={<Play />} />
+            <Route path="/screen" element={<Screen />} />
+            <Route path="/play" element={<Frame />} />
+            <Route path="/cloud" element={<Cloud />} />
+            <Route path="/revenue" element={<Revenue />} />
+            <Route path="/invest" element={<Invest />} />
+            <Route path="/ai" element={<AI />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/studio" element={<Studio />} />
+          </Routes>
+        </div>
+      </PasswordGate>
     </BrowserRouter>
   )
 }
