@@ -13,7 +13,7 @@ export default function OneColumn() {
         {/* Bottom line */}
         <div className="absolute bottom-0 left-[10px] right-[10px] h-px bg-black/7" />
 
-        <h2 className={`font-serif text-[32px] md:text-[48px] lg:text-[64px] font-light text-midnight mb-4 text-center leading-[1.05] transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Displays Designed for<br />the Digital Era</h2>
+        <h2 className={`font-serif text-[32px] md:text-[48px] lg:text-[64px] font-light text-midnight mb-4 text-center leading-[1.05] transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Screens Designed for<br />the Digital Era</h2>
         <p className={`font-serif text-[16px] text-midnight/60 text-center px-[200px] transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}><span className="font-bold">Axxe Screen™</span> delivers high-performance displays built specifically for modern digital environments. Designed for clarity, reliability, and seamless integration with the Axxe ecosystem.</p>
         <div className={`mt-4 flex justify-center transition-all duration-1000 delay-[400ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <a

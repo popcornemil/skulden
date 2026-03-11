@@ -17,12 +17,15 @@ export default function EmptySection() {
             <p className="font-serif text-[16px] text-white/60">From retail environments to corporate spaces and public installations, <span className="font-bold">Axxe Frame™</span> simplifies complex display setups — patented frame technology, fast and modular installation, precision alignment system, designed for premium digital signage — install smarter, scale faster</p>
             <a href="#contact" className="inline-block mt-6 px-6 py-3 bg-[#1b4137] text-white text-[14px] font-serif font-medium rounded-full hover:bg-gold-light transition-colors duration-300">Book demo</a>
           </div>
-          <div className="flex items-end pl-[50px]">
+          <div className="flex flex-col justify-end pl-[50px]">
+            <p className="font-serif text-[16px] text-white/60 mb-4">Everything you need for a professional display installation:</p>
             <ul className="font-serif text-[16px] text-white/60 space-y-3">
               <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Patented frame technology</li>
               <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Fast and modular installation</li>
               <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Precision alignment system</li>
               <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Designed for premium digital signage</li>
+              <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Compatible with all Axxe Screen™ sizes</li>
+              <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Built for indoor and semi-outdoor environments</li>
             </ul>
           </div>
         </div>
