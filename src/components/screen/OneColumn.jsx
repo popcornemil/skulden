@@ -13,8 +13,8 @@ export default function OneColumn() {
         {/* Bottom line */}
         <div className="absolute bottom-0 left-[10px] right-[10px] h-px bg-black/7" />
 
-        <h2 className={`font-serif text-[32px] md:text-[48px] lg:text-[64px] font-light text-midnight mb-4 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Designed for Digital Architecture</h2>
-        <p className={`font-serif text-[16px] text-midnight/60 text-center transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}><span className="font-bold">Axxe Frame™</span> is more than a mount. It's a structural system built to integrate displays into spaces with precision and elegance. Clean lines. Perfect alignment. Minimal installation time. Every detail is designed to elevate the display.</p>
+        <h2 className={`font-serif text-[32px] md:text-[48px] lg:text-[64px] font-light text-midnight mb-4 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Displays Designed for the Digital Era</h2>
+        <p className={`font-serif text-[16px] text-midnight/60 text-center transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}><span className="font-bold">Axxe Screen™</span> delivers high-performance displays built specifically for modern digital environments. Designed for clarity, reliability, and seamless integration with the Axxe ecosystem. From retail spaces to large-scale installations, <span className="font-bold">Axxe Screen™</span> brings content to life with precision and impact.</p>
       </div>
     </section>
   )

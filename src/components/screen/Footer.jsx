@@ -13,12 +13,12 @@ export default function Footer() {
           <div className="absolute bottom-0 left-[10px] right-[10px] h-px bg-black/7" />
           <div className={`flex flex-col items-center gap-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <img
-              src="/axxe-frame.png"
-              alt="Axxe Frame"
+              src="/axxe-screen.png"
+              alt="Axxe Screen"
               className="h-10 md:h-14 w-auto"
               style={{ filter: 'brightness(0)' }}
             />
-            <p className="font-serif text-[14px] md:text-[16px] text-midnight/40 text-center">Technology for the physical world.</p>
+            <p className="font-serif text-[14px] md:text-[16px] text-midnight/40 text-center">Displays designed for the digital era.</p>
           </div>
         </div>
 

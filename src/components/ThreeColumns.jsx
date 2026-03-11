@@ -2,7 +2,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const cells = [
   { title: 'Axxe Frame™', text: 'Patented display framing system designed for seamless installations.', link: true, href: '/frame' },
-  { title: 'Axxe Screen™', text: 'Professional displays engineered for modern environments.', link: true },
+  { title: 'Axxe Screen™', text: 'Professional displays engineered for modern environments.', link: true, href: '/screen' },
   { title: 'Axxe Play™', text: 'Software to control and manage digital screens at scale.', link: true },
   { title: 'Axxe Cloud™', text: 'The platform connecting every device and location.', link: true },
   { title: 'Axxe Studio™', text: 'Create and manage visual content across your network.', link: true },

@@ -1,9 +1,8 @@
 import { useScrollReveal } from '../../hooks/useScrollReveal'
 
 const cells = [
-  { title: 'Built for\nProfessionals', text: <>From retail environments to corporate spaces and public installations, <span className="font-bold">Axxe Frame™</span> simplifies complex display setups — patented frame technology, fast and modular installation, precision alignment system, designed for premium digital signage — install smarter, scale faster</> },
-  { title: 'Minimal Design.\nMaximum Impact.', text: <>Displays should feel like part of the architecture — not an add-on. <span className="font-bold">Axxe Frame™</span> creates a clean, modern display surface that enhances the space around it. Invisible structure. Visible impact.</> },
-  { title: 'The Future of\nDisplay Framing', text: <><span className="font-bold">Axxe Frame™</span> is redefining how digital displays are installed, integrated, and experienced. Engineered for performance. Designed for aesthetics. Built for the future.</> },
+  { title: 'Built for\nProfessional Displays', text: <>Every <span className="font-bold">Axxe Screen™</span> is engineered to perform in demanding environments — high brightness and clarity, optimized for digital signage, seamless integration with <span className="font-bold">Axxe Frame™</span>, and reliable 24/7 performance. Screens designed not just to display content — but to elevate it.</> },
+  { title: 'Made for\nPerfect Integration', text: <><span className="font-bold">Axxe Screen™</span> works seamlessly with the <span className="font-bold">Axxe Frame™</span> system, creating a clean and architectural display installation. No visible complexity. Only pure visual impact.</> },
 ]
 
 export default function ThreeColumns() {
@@ -11,7 +10,7 @@ export default function ThreeColumns() {
 
   return (
     <section className="bg-[#fcfbf9]" ref={ref}>
-      <div className="max-w-[1200px] mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="max-w-[1200px] mx-auto w-full grid grid-cols-1 md:grid-cols-2">
         {cells.map((cell, i) => (
           <div key={i} className={`relative p-6 md:p-[50px] transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: `${i * 100}ms` }}>
             {/* Left line (first column) */}
