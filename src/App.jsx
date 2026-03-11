@@ -9,6 +9,7 @@ import Revenue from './pages/Revenue'
 import Invest from './pages/Invest'
 import AI from './pages/AI'
 import About from './pages/About'
+import Studio from './pages/Studio'
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/invest" element={<Invest />} />
           <Route path="/ai" element={<AI />} />
           <Route path="/about" element={<About />} />
+          <Route path="/studio" element={<Studio />} />
         </Routes>
       </div>
     </BrowserRouter>
