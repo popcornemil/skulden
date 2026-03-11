@@ -12,7 +12,7 @@ export default function HubSection() {
   const outputs = [
     { icon: '◈', label: 'Real-time insights' },
     { icon: '⚙', label: 'Remote management' },
-    { icon: '◉', label: 'Optimized performance' },
+    { icon: '◉', label: 'Revenue performance' },
   ]
 
   return (

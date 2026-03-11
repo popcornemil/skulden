@@ -4,7 +4,7 @@ export default function TwoColumns2() {
   const [ref, isVisible] = useScrollReveal()
 
   return (
-    <section className="bg-[#fcfbf9]" ref={ref}>
+    <section id="contact" className="bg-[#fcfbf9]" ref={ref}>
       <div className="max-w-[1200px] mx-auto w-full grid grid-cols-1 md:grid-cols-2">
         <div className="relative p-6 md:p-[50px]">
           <div className="absolute left-0 top-[10px] bottom-[10px] w-px bg-black/7" />

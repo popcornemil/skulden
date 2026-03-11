@@ -29,7 +29,6 @@ export default function Home() {
       </section>
       <ThreeColumns2 />
       <HubSection />
-      <AISection />
       <section className="bg-[#fcfbf9]">
         <div className="max-w-[1200px] mx-auto w-full grid grid-cols-1 md:grid-cols-2">
           <div className="relative p-6 md:p-[50px]">
@@ -45,6 +44,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <AISection />
       <TwoColumns2 />
       <Footer />
     </>

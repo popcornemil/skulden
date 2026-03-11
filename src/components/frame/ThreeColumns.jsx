@@ -1,9 +1,9 @@
 import { useScrollReveal } from '../../hooks/useScrollReveal'
 
 const cells = [
-  { title: 'Built for\nProfessionals', text: <>From retail environments to corporate spaces and public installations, <span className="font-bold">Axxe Frame™</span> simplifies complex display setups — patented frame technology, fast and modular installation, precision alignment system, designed for premium digital signage — install smarter, scale faster</> },
-  { title: 'Minimal Design.\nMaximum Impact.', text: <>Displays should feel like part of the architecture — not an add-on. <span className="font-bold">Axxe Frame™</span> creates a clean, modern display surface that enhances the space around it. Invisible structure. Visible impact.</> },
-  { title: 'The Future of\nDisplay Framing', text: <><span className="font-bold">Axxe Frame™</span> is redefining how digital displays are installed, integrated, and experienced. Engineered for performance. Designed for aesthetics. Built for the future.</> },
+  { title: 'Control Every Screen', text: <>Manage your entire display network from one intuitive platform. Upload content. Schedule campaigns. Control screens in real time. All from one place.</> },
+  { title: 'Built for Modern\nDigital Signage', text: <><span className="font-bold">Axxe Play™</span> simplifies digital screen management without sacrificing power. Cloud-based platform. Remote screen control. Real-time content updates. Smart scheduling. Scalable for large installations. Simple to use. Powerful to scale.</> },
+  { title: 'Designed to Work\nwith Axxe Frame™', text: <>Together, <span className="font-bold">Axxe Frame™</span> and <span className="font-bold">Axxe Play™</span> create a complete digital display solution. Hardware meets software. Design meets control. One ecosystem for modern digital displays.</> },
 ]
 
 export default function ThreeColumns() {
