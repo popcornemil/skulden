@@ -3,7 +3,7 @@ const logos = [
   '/axxe-screen.png',
   '/axxe-play.png',
   '/axxe-cloude.png',
-  '/axxe-studio.png',
+  '/axxe-revenue.png',
   '/axxe-ai.png',
   '/axxe-invest.png',
 ]

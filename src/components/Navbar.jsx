@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -18,13 +19,13 @@ export default function Navbar() {
         <div className="absolute right-0 top-[10px] bottom-0 w-px bg-black/7" />
 
         {/* Center logo — true center of navbar */}
-        <a href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center">
+        <Link to="/" className="absolute left-1/2 -translate-x-1/2 flex items-center">
           <img
             src="/logo-nopayoff-gold.png"
             alt="Axxe"
             className="h-6 md:h-8 w-auto" style={{ filter: 'brightness(0)' }}
           />
-        </a>
+        </Link>
 
         {/* Desktop */}
         <div className="hidden lg:flex items-center w-full">

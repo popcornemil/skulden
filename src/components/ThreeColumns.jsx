@@ -5,7 +5,7 @@ const cells = [
   { title: 'Axxe Screen™', text: 'Professional displays engineered for modern environments.', link: true, href: '/screen' },
   { title: 'Axxe Play™', text: 'Software to control and manage digital screens at scale.', link: true },
   { title: 'Axxe Cloud™', text: 'The platform connecting every device and location.', link: true },
-  { title: 'Axxe Studio™', text: 'Create and manage visual content across your network.', link: true },
+  { title: 'Axxe Revenue™', text: 'Retail media platform enabling in-store advertising, brand campaigns, and new revenue streams for retailers.', link: true },
   { title: 'Axxe AI™', text: 'Intelligence powering adaptive retail experiences.', link: true },
 ]
 

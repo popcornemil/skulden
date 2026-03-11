@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Frame from './pages/Frame'
 import Screen from './pages/Screen'
+import Play from './pages/Play'
 
 export default function App() {
   return (
@@ -11,8 +12,9 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/frame" element={<Frame />} />
+          <Route path="/frame" element={<Play />} />
           <Route path="/screen" element={<Screen />} />
+          <Route path="/play" element={<Frame />} />
         </Routes>
       </div>
     </BrowserRouter>

@@ -26,10 +26,10 @@ const products = [
     tagline: 'The platform connecting every device and location.'
   },
   {
-    name: 'Axxe Studio™',
+    name: 'Axxe Revenue™',
     category: 'Software',
     image: '/studio.jpeg',
-    tagline: 'Create and manage visual content across your network.'
+    tagline: 'Retail media platform enabling in-store advertising, brand campaigns, and new revenue streams for retailers.'
   },
   {
     name: 'Axxe AI™',

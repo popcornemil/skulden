@@ -43,9 +43,9 @@ const solutions = [
     ],
   },
   {
-    tab: 'Axxe Studio',
-    heading: 'Create and manage visual content across your network.',
-    description: 'Axxe Studio™ is the creative layer of the Axxe ecosystem. A powerful platform for designing, managing, and publishing content to digital displays. Turn ideas into dynamic visual experiences.',
+    tab: 'Axxe Revenue',
+    heading: 'Retail media platform enabling in-store advertising and new revenue streams.',
+    description: 'Retail media platform enabling in-store advertising, brand campaigns, and new revenue streams for retailers.',
     image: '/studio.jpeg',
     stats: [
       { value: '3x', label: 'Faster content creation' },
