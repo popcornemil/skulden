@@ -1,7 +1,7 @@
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const cells = [
-  { title: 'Axxe Frame™', text: 'Patented display framing system designed for seamless installations.', link: true },
+  { title: 'Axxe Frame™', text: 'Patented display framing system designed for seamless installations.', link: true, href: '/frame' },
   { title: 'Axxe Screen™', text: 'Professional displays engineered for modern environments.', link: true },
   { title: 'Axxe Play™', text: 'Software to control and manage digital screens at scale.', link: true },
   { title: 'Axxe Cloud™', text: 'The platform connecting every device and location.', link: true },
@@ -28,7 +28,7 @@ export default function ThreeColumns() {
 
             {cell.title && <h3 className="font-serif text-[22px] text-midnight mb-3">{cell.title}</h3>}
             {cell.text && <p className="font-serif text-[16px] text-midnight/60">{cell.text}</p>}
-            {cell.link && <a href="#" className="font-serif text-[16px] text-midnight mt-4 inline-block hover:text-gold transition-colors duration-300">Learn more &rarr;</a>}
+            {cell.link && <a href={cell.href || '#'} className="font-serif text-[16px] text-midnight mt-4 inline-block hover:text-gold transition-colors duration-300">Learn more &rarr;</a>}
           </div>
         ))}
       </div>

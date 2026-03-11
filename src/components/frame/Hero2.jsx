@@ -20,7 +20,7 @@ export default function Hero2() {
           {/* Tagline */}
           <div className={`mb-4 transition-all duration-1000 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <p className="font-serif text-sm font-medium text-midnight">
-              AI-Powered Retail Tech
+              Axxe Frame™
             </p>
           </div>
 
@@ -28,7 +28,7 @@ export default function Hero2() {
           <h1 className={`font-serif text-[32px] md:text-[48px] lg:text-[64px] font-light text-midnight leading-[1.05] tracking-tight max-w-[900px] transition-all duration-1000 delay-200 ${
             loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
-            AI Infrastructure<br />for the Future of Retail
+            The Frame Behind<br />Next-Generation Displays
           </h1>
         </div>
 

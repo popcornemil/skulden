@@ -14,6 +14,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Roobert';
+  src: url('/fonts/RoobertTRIAL-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roobert';
+  src: url('/fonts/RoobertTRIAL-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 @theme {
   --color-gold: #C5A55A;
   --color-gold-light: #D4B96E;

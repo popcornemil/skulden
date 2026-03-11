@@ -14,9 +14,11 @@ export default function Navbar() {
       scrolled ? 'bg-[#fcfbf9]/95 backdrop-blur-md border-b border-black/5' : 'bg-[#fcfbf9]'
     }`}>
       <div className="max-w-[1200px] mx-auto w-full px-6 relative flex items-center h-16 md:h-20">
+        <div className="absolute left-0 top-[10px] bottom-0 w-px bg-black/7" />
+        <div className="absolute right-0 top-[10px] bottom-0 w-px bg-black/7" />
 
         {/* Center logo — true center of navbar */}
-        <a href="#" className="absolute left-1/2 -translate-x-1/2 flex items-center">
+        <a href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center">
           <img
             src="/logo-nopayoff-gold.png"
             alt="Axxe"
