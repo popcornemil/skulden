@@ -21,7 +21,7 @@ export default function Frame() {
           <div className="absolute left-0 top-[10px] bottom-[10px] w-px bg-black/7" />
           <div className="absolute right-0 top-[10px] bottom-[10px] w-px bg-black/7" />
           <div className="absolute bottom-0 left-[10px] right-[10px] h-px bg-black/7" />
-          <div className="transition-transform duration-700 ease-out hover:scale-[1.03] hover:rotate-[1deg]">
+          <div className="transition-transform duration-700 ease-out hover:scale-[1.03]">
             <DashboardMockup />
           </div>
         </div>

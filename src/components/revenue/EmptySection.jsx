@@ -25,6 +25,8 @@ export default function EmptySection() {
                 <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Deliver targeted campaigns in specific locations</li>
                 <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Measure performance and engagement</li>
                 <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Create scalable retail media networks</li>
+                <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Monetize physical spaces with digital advertising</li>
+                <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Connect brands directly to in-store audiences</li>
               </ul>
             </div>
           </div>
