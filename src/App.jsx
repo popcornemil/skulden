@@ -5,6 +5,7 @@ import Frame from './pages/Frame'
 import Screen from './pages/Screen'
 import Play from './pages/Play'
 import Cloud from './pages/Cloud'
+import Revenue from './pages/Revenue'
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/screen" element={<Screen />} />
           <Route path="/play" element={<Frame />} />
           <Route path="/cloud" element={<Cloud />} />
+          <Route path="/revenue" element={<Revenue />} />
         </Routes>
       </div>
     </BrowserRouter>
