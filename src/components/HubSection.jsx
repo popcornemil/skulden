@@ -60,14 +60,25 @@ export default function HubSection() {
         {/* Heading */}
         <div className="text-center mb-[25px]">
           <h2 className={`font-serif text-[32px] md:text-[48px] lg:text-[56px] font-light text-midnight leading-tight transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            Every signal. One intelligence.
+            AI-Powered Retail Tech
           </h2>
-          <h2 className={`font-serif text-[32px] md:text-[48px] lg:text-[56px] italic text-gold leading-tight transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            AI at the core.
-          </h2>
-          <p className={`font-serif text-[16px] text-midnight/50 mt-4 transition-all duration-1000 delay-[400ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <p className={`font-serif text-[16px] text-midnight/50 mt-4 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Axxe AI processes every data point across your retail ecosystem.
           </p>
+          <div className={`mt-6 transition-all duration-1000 delay-[400ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <a
+              href="/ai"
+              className="group inline-block bg-midnight text-white rounded-full hover:bg-midnight/90 transition-all duration-500"
+              style={{ padding: '16px' }}
+            >
+              <span className="relative flex items-center">
+                <span className="w-10 h-10 rounded-full bg-gold flex items-center justify-center shrink-0 absolute left-0 group-hover:left-[calc(100%-40px)] transition-all duration-500 z-10">
+                  <span className="text-lg text-midnight">&rarr;</span>
+                </span>
+                <span className="font-serif text-[16px] md:text-[20px] font-medium pl-[52px] pr-2 group-hover:pl-2 group-hover:pr-[52px] transition-all duration-500">Discover Axxe AI</span>
+              </span>
+            </a>
+          </div>
         </div>
 
         {/* Hub diagram — desktop */}

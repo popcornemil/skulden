@@ -31,19 +31,19 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center w-full">
           {/* Far left links */}
           <div className={`flex items-center gap-6 transition-all duration-500 ${scrolled ? 'translate-x-[324px]' : ''}`}>
-            <a href="#" className="text-xs font-medium tracking-[0.2em] uppercase text-midnight/60 hover:text-midnight transition-colors duration-300">AI</a>
-            <a href="#" className="text-xs font-medium tracking-[0.2em] uppercase text-midnight/60 hover:text-midnight transition-colors duration-300">Marketplace</a>
+            <Link to="/ai" className="text-xs font-medium tracking-[0.2em] uppercase text-midnight/60 hover:text-midnight transition-colors duration-300">AI</Link>
+            <a href="#" className="text-xs font-medium tracking-[0.2em] uppercase text-midnight/60 hover:text-midnight transition-colors duration-300">Products</a>
           </div>
 
           {/* Right links */}
           <div className="flex items-center gap-6 ml-auto">
             <div className={`flex items-center gap-6 transition-all duration-500 ${scrolled ? '-translate-x-[200px]' : ''}`}>
-              <a href="#about" className="text-xs font-medium tracking-[0.2em] uppercase text-midnight/60 hover:text-midnight transition-colors duration-300">Invest</a>
-              <a href="#contact" className="text-xs font-medium tracking-[0.2em] uppercase text-midnight/60 hover:text-midnight transition-colors duration-300">About</a>
+              <Link to="/invest" className="text-xs font-medium tracking-[0.2em] uppercase text-midnight/60 hover:text-midnight transition-colors duration-300">Invest</Link>
+              <Link to="/about" className="text-xs font-medium tracking-[0.2em] uppercase text-midnight/60 hover:text-midnight transition-colors duration-300">About</Link>
             </div>
             <a
               href="#contact"
-              className="px-5 py-2 bg-midnight text-white text-[10px] font-semibold tracking-[0.2em] uppercase rounded-full hover:bg-midnight/80 transition-all duration-300"
+              className="px-5 py-3 bg-midnight text-white text-[10px] font-semibold tracking-[0.2em] uppercase rounded-full hover:bg-midnight/80 transition-all duration-300"
             >
               Book Demo
             </a>

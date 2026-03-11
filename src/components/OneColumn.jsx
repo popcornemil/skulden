@@ -13,7 +13,7 @@ export default function OneColumn() {
         {/* Bottom line */}
         <div className="absolute bottom-0 left-[10px] right-[10px] h-px bg-black/7" />
 
-        <h2 className={`font-serif text-[32px] md:text-[48px] lg:text-[64px] font-light text-midnight mb-4 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>One Platform. Multiple Layers.</h2>
+        <h2 className={`font-serif text-[32px] md:text-[48px] lg:text-[64px] font-light text-midnight mb-4 text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>One Platform. Multiple Products.</h2>
         <p className={`font-serif text-[16px] text-midnight/60 text-center transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Axxe combines hardware, software, and intelligence into one unified ecosystem.</p>
       </div>
     </section>

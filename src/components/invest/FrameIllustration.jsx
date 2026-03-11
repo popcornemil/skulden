@@ -5,17 +5,9 @@ export default function FrameIllustration() {
 
   return (
     <section className="bg-[#fcfbf9]" ref={ref}>
-      <div className="max-w-[1200px] mx-auto w-full grid grid-cols-1 md:grid-cols-2">
+      <div className="max-w-[1200px] mx-auto w-full">
         <div className="relative p-6 md:p-[50px]">
           <div className="absolute left-0 top-[10px] bottom-[10px] w-px bg-black/7" />
-          <div className="absolute right-0 top-[10px] bottom-[10px] w-px bg-black/7" />
-          <div className="absolute bottom-0 left-[10px] right-[10px] h-px bg-black/7" />
-          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <img src="/invest-city.jpg" alt="City skyline" className="w-full aspect-square object-cover object-top rounded-lg grayscale" />
-          </div>
-        </div>
-        <div className="relative p-6 md:p-[50px] flex items-center">
-          <div className="hidden md:block absolute right-0 top-[10px] bottom-[10px] w-px bg-black/7" />
           <div className="absolute right-0 top-[10px] bottom-[10px] w-px bg-black/7" />
           <div className="absolute bottom-0 left-[10px] right-[10px] h-px bg-black/7" />
           <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
