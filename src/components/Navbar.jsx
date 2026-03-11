@@ -1,8 +1,18 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
+const products = [
+  { name: 'Axxe Frame™', desc: 'Patented display framing system', href: '/frame' },
+  { name: 'Axxe Screen™', desc: 'Professional digital displays', href: '/screen' },
+  { name: 'Axxe Play™', desc: 'Software for digital signage', href: '/play' },
+  { name: 'Axxe Cloud™', desc: 'Connected device platform', href: '/cloud' },
+  { name: 'Axxe Revenue™', desc: 'Retail media platform', href: '/revenue' },
+  { name: 'Axxe Studio™', desc: 'Creative content platform', href: '/studio' },
+]
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
+  const [showProducts, setShowProducts] = useState(false)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -32,7 +42,28 @@ export default function Navbar() {
           {/* Far left links */}
           <div className={`flex items-center gap-6 transition-all duration-500 ${scrolled ? 'translate-x-[324px]' : ''}`}>
             <Link to="/ai" className="text-xs font-medium tracking-[0.2em] uppercase text-midnight/60 hover:text-midnight transition-colors duration-300">AI</Link>
-            <a href="#" className="text-xs font-medium tracking-[0.2em] uppercase text-midnight/60 hover:text-midnight transition-colors duration-300">Products</a>
+            <div
+              className="relative"
+              onMouseEnter={() => setShowProducts(true)}
+              onMouseLeave={() => setShowProducts(false)}
+            >
+              <span className="text-xs font-medium tracking-[0.2em] uppercase text-midnight/60 hover:text-midnight transition-colors duration-300 cursor-pointer">Products</span>
+              <div className={`absolute top-full left-0 pt-4 transition-all duration-300 ${showProducts ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
+                <div className="bg-[#fcfbf9] border border-black/7 rounded-lg shadow-lg p-4 grid grid-cols-2 gap-3 w-[420px]">
+                  {products.map(p => (
+                    <Link
+                      key={p.name}
+                      to={p.href}
+                      className="group p-3 rounded-lg hover:bg-black/3 transition-colors duration-200"
+                      onClick={() => setShowProducts(false)}
+                    >
+                      <p className="font-serif text-[14px] text-midnight font-medium group-hover:text-gold transition-colors duration-200">{p.name}</p>
+                      <p className="font-serif text-[12px] text-midnight/40 mt-0.5">{p.desc}</p>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Right links */}

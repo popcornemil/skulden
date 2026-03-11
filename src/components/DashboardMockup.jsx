@@ -1,11 +1,11 @@
 export default function DashboardMockup() {
   const displays = [
-    { name: 'Entrance Display', location: 'Nordstan, Gothenburg', status: 'Live', uptime: '99.8%', impressions: '12,450', image: '/frame.jpeg' },
-    { name: 'Checkout Screen A', location: 'Mall of Scandinavia', status: 'Live', uptime: '99.9%', impressions: '8,320', image: '/screen.jpeg' },
-    { name: 'Window Display', location: 'Emporia, Malmö', status: 'Scheduled', uptime: '98.5%', impressions: '15,200', image: '/studio.jpeg' },
-    { name: 'Aisle End Cap', location: 'Nordstan, Gothenburg', status: 'Live', uptime: '99.7%', impressions: '6,890', image: '/play.jpeg' },
-    { name: 'Fitting Room Panel', location: 'Täby Centrum', status: 'Live', uptime: '100%', impressions: '4,120', image: '/cloud.jpeg' },
-    { name: 'Lobby Screen', location: 'Väla, Helsingborg', status: 'Paused', uptime: '97.2%', impressions: '9,750', image: '/ai.jpeg' },
+    { name: 'Entrance Display', location: 'Nordstan, Gothenburg', status: 'Live', uptime: '99.8%', impressions: '12,450', image: '/bild1.jpg' },
+    { name: 'Checkout Screen A', location: 'Mall of Scandinavia', status: 'Live', uptime: '99.9%', impressions: '8,320', image: '/bild2.jpg' },
+    { name: 'Window Display', location: 'Emporia, Malmö', status: 'Scheduled', uptime: '98.5%', impressions: '15,200', image: '/bild3.jpg' },
+    { name: 'Aisle End Cap', location: 'Nordstan, Gothenburg', status: 'Live', uptime: '99.7%', impressions: '6,890', image: '/bild4.jpg' },
+    { name: 'Fitting Room Panel', location: 'Täby Centrum', status: 'Live', uptime: '100%', impressions: '4,120', image: '/bild5.jpg' },
+    { name: 'Lobby Screen', location: 'Väla, Helsingborg', status: 'Paused', uptime: '97.2%', impressions: '9,750', image: '/bild6.jpg' },
   ]
 
   return (
@@ -36,9 +36,9 @@ export default function DashboardMockup() {
             ))}
           </nav>
           <div className="mt-auto px-2 flex items-center gap-2">
-            <div className="w-7 h-7 rounded-full bg-[#C5A55A] flex items-center justify-center text-white text-[11px] font-medium">AK</div>
+            <img src="/nikk.png" alt="Nikk Matson" className="w-7 h-7 rounded-full object-cover" />
             <div>
-              <p className="text-[12px] font-medium">Anna Karlsson</p>
+              <p className="text-[12px] font-medium">Nikk Matson</p>
               <p className="text-[10px] text-black/40">Axxe HQ</p>
             </div>
           </div>
