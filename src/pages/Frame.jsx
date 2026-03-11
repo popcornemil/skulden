@@ -4,6 +4,7 @@ import OneColumn from '../components/frame/OneColumn'
 import DashboardMockup from '../components/frame/DashboardMockup'
 import ThreeColumns from '../components/frame/ThreeColumns'
 import FrameIllustration from '../components/frame/FrameIllustration'
+import OneColumn2 from '../components/frame/OneColumn2'
 import AISection from '../components/frame/AISection'
 import HubSection from '../components/frame/HubSection'
 import ThreeColumns2 from '../components/frame/ThreeColumns2'
@@ -13,11 +14,10 @@ import Footer from '../components/frame/Footer'
 export default function Frame() {
   return (
     <>
-      <Hero2 />
-      <TwoColumns />
       <OneColumn />
       <ThreeColumns />
       <FrameIllustration />
+      <OneColumn2 />
       <TwoColumns2 />
       <Footer />
     </>
