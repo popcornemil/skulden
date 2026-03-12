@@ -1,15 +1,12 @@
 import { useEffect, useState, useRef } from 'react'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
-const BASE_DEBT = 1_041_890_000_000
 const BASE_TIME = new Date('2026-03-12T00:00:00').getTime()
-const RATE_PER_MS = 300.61 / 1000
-const SWEDEN_POP = 10_500_000
 
 const cities = [
-  { name: 'Stockholm', pop: 1_000_000 },
-  { name: 'Göteborg', pop: 590_000 },
-  { name: 'Malmö', pop: 350_000 },
+  { name: 'Stockholm', debt: 86_642_961_377, ratePerMs: 300.61 / 1000 },
+  { name: 'Göteborg', debt: 51_000_000_000, ratePerMs: 177.36 / 1000 },
+  { name: 'Malmö', debt: 30_000_000_000, ratePerMs: 105.21 / 1000 },
 ]
 
 function formatKr(n) {
@@ -26,19 +23,17 @@ function CityCard({ city, isVisible, delay }) {
   const [added, setAdded] = useState(0)
   const rafRef = useRef(null)
   const startRef = useRef(Date.now())
-  const share = city.pop / SWEDEN_POP
 
   useEffect(() => {
     const tick = () => {
       const now = Date.now()
-      const totalDebt = BASE_DEBT + (now - BASE_TIME) * RATE_PER_MS
-      setDebt(totalDebt * share)
-      setAdded((now - startRef.current) * RATE_PER_MS * share)
+      setDebt(city.debt + (now - BASE_TIME) * city.ratePerMs)
+      setAdded((now - startRef.current) * city.ratePerMs)
       rafRef.current = requestAnimationFrame(tick)
     }
     rafRef.current = requestAnimationFrame(tick)
     return () => cancelAnimationFrame(rafRef.current)
-  }, [share])
+  }, [city])
 
   return (
     <div className={`relative p-[25px] bg-white rounded-[16px] shadow-md transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: `${delay}ms` }}>
