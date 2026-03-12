@@ -5,8 +5,8 @@ const BASE_TIME = new Date('2026-03-12T00:00:00').getTime()
 
 const cities = [
   { name: 'Stockholm', debt: 86_642_961_377, ratePerMs: 300.61 / 1000, label: 'Reella skulder' },
-  { name: 'Göteborg', debt: 51_000_000_000, ratePerMs: 177.36 / 1000, label: 'Uppskattade skulder' },
-  { name: 'Malmö', debt: 30_000_000_000, ratePerMs: 105.21 / 1000, label: 'Uppskattade skulder' },
+  { name: 'Göteborg', debt: 51_000_000_000, ratePerMs: 177.36 / 1000, label: 'Estimerade skulder' },
+  { name: 'Malmö', debt: 30_000_000_000, ratePerMs: 105.21 / 1000, label: 'Estimerade skulder' },
 ]
 
 function formatKr(n) {
