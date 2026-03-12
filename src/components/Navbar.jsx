@@ -19,7 +19,7 @@ export default function Navbar() {
           <img
             src="/skulden-logo.png"
             alt="Skulden"
-            className="h-6 md:h-8 w-auto"
+            className="h-8 md:h-12 w-auto"
           />
         </Link>
       </div>

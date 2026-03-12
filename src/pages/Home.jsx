@@ -20,8 +20,8 @@ export default function Home() {
     <>
       <Hero2 />
       <TwoColumns />
-      <OneColumn />
       <ThreeColumns />
+      <OneColumn />
 
       <section className="bg-[#fcfbf9]">
         <div className="max-w-[1200px] mx-auto w-full relative p-6 md:p-[50px]">

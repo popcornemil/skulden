@@ -5,7 +5,7 @@ export default function OneColumn() {
 
   return (
     <section className="bg-[#fcfbf9]" ref={ref}>
-      <div className="max-w-[1200px] mx-auto w-full relative p-6 md:p-[50px]">
+      <div className="max-w-[1200px] mx-auto w-full relative p-6 pb-0 md:px-[50px] md:pt-[50px] md:pb-0">
         {/* Left line */}
         {/* Right line */}
         {/* Bottom line */}

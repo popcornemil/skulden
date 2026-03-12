@@ -62,8 +62,8 @@ export default function Hero2() {
   }, [])
 
   return (
-    <section className="bg-[#fcfbf9] pt-16 md:pt-20">
-      <div className="max-w-[1200px] mx-auto w-full min-h-[300px] md:h-[500px] flex flex-col justify-center gap-8 p-6 md:p-[50px] relative">
+    <section id="hero" className="bg-[#fcfbf9] pt-16 md:pt-20 relative">
+      <div className="max-w-[1200px] mx-auto w-full min-h-[calc(100vh-64px)] md:min-h-[calc(100vh-80px)] flex flex-col justify-center gap-8 p-6 pb-16 md:px-[50px] md:pb-24 relative">
         {/* Left line */}
         {/* Right line */}
         {/* Bottom line */}
@@ -108,6 +108,16 @@ export default function Hero2() {
           </p>
         </div>
 
+        {/* Scroll down indicator */}
+        <button
+          onClick={() => document.getElementById('next-section')?.scrollIntoView({ behavior: 'smooth' })}
+          className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-midnight/40 hover:text-midnight/60 transition-all duration-1000 delay-600 cursor-pointer ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+        >
+          <span className="font-serif text-xs uppercase tracking-[0.2em]">Läs mer</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
       </div>
     </section>
   )
