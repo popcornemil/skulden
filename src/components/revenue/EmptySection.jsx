@@ -19,14 +19,15 @@ export default function EmptySection() {
           </div>
           <div className="flex items-end pl-[50px]">
             <div>
-              <p className="font-serif text-[16px] text-white/60 mb-4">With Axxe Revenue, retailers can:</p>
+              <p className="font-serif text-[16px] text-white/60 mb-4">Let Axxe manage the sales of in-store advertising</p>
               <ul className="font-serif text-[16px] text-white/60 space-y-3">
-                <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Run brand advertising across in-store displays</li>
-                <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Deliver targeted campaigns in specific locations</li>
-                <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Measure performance and engagement</li>
-                <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Create scalable retail media networks</li>
-                <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Monetize physical spaces with digital advertising</li>
-                <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Connect brands directly to in-store audiences</li>
+                <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Share display time between store content and brand campaigns</li>
+                <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Choose how much screen time to monetize</li>
+                <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Generate new revenue from existing store infrastructure</li>
+                <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Run targeted brand campaigns across store locations</li>
+                <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Access measurable retail media performance data</li>
+                <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Turn physical retail spaces into scalable media networks</li>
+                <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Connect brands directly with shoppers at the point of purchase</li>
               </ul>
             </div>
           </div>

@@ -14,7 +14,7 @@ export default function OneColumn() {
         <div className="absolute bottom-0 left-[10px] right-[10px] h-px bg-black/7" />
 
         <h2 className={`font-serif text-[32px] md:text-[48px] lg:text-[64px] font-light text-midnight mb-4 text-center leading-[1.05] transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Unlock New Revenue<br />from Your Retail Network</h2>
-        <p className={`font-serif text-[16px] text-midnight/60 text-center px-[200px] transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Axxe enables retailers to monetize their physical spaces through intelligent digital display networks.</p>
+        <p className={`font-serif text-[16px] text-midnight/60 text-center px-[200px] transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Axxe enables retailers to monetize their physical spaces through intelligent digital display networks. Axxe manages advertising sales and media operations, making the process seamless — retailers simply install the screens and start generating revenue.</p>
         <div className={`mt-4 flex justify-center transition-all duration-1000 delay-[400ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <a
             href="#contact"

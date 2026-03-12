@@ -25,8 +25,8 @@ export default function LogoSection() {
                   maskRepeat: 'no-repeat',
                   maskPosition: 'center',
                   backgroundColor: '#0a0a0a',
-                  width: '180px',
-                  height: '80px',
+                  width: '260px',
+                  height: '120px',
                 }}
                 onMouseEnter={e => e.currentTarget.style.backgroundColor = '#1b4137'}
                 onMouseLeave={e => e.currentTarget.style.backgroundColor = '#0a0a0a'}
@@ -61,8 +61,8 @@ export default function LogoSection() {
                   maskRepeat: 'no-repeat',
                   maskPosition: 'center',
                   backgroundColor: '#0a0a0a',
-                  width: '180px',
-                  height: '80px',
+                  width: '260px',
+                  height: '120px',
                 }}
                 onMouseEnter={e => e.currentTarget.style.backgroundColor = '#1b4137'}
                 onMouseLeave={e => e.currentTarget.style.backgroundColor = '#0a0a0a'}

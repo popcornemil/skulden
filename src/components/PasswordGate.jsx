@@ -25,7 +25,6 @@ export default function PasswordGate({ children }) {
   return (
     <div className="min-h-screen bg-midnight flex items-center justify-center p-6">
       <form onSubmit={handleSubmit} className="w-full max-w-[360px] text-center">
-        <img src="/axxe-logo.svg" alt="AXXE" className="h-8 mx-auto mb-10 opacity-60" />
         <input
           type="password"
           value={input}

@@ -26,8 +26,8 @@ export default function About() {
               <ul className="font-serif text-[16px] text-white/60 space-y-3">
                 <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Funding ADHD research initiatives</li>
                 <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Supporting children and families</li>
-                <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Advancing early diagnosis and treatment</li>
-                <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Creating awareness through technology</li>
+                <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>Optimizing life with ADHD</li>
+                <li className="flex items-start gap-3"><span className="text-gold mt-1.5 text-[8px]">●</span>ADHD Business Strategy Insights</li>
               </ul>
             </div>
           </div>

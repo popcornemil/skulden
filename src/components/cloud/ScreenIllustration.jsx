@@ -51,8 +51,8 @@ export default function ScreenIllustration() {
                 x1={nodes[from].cx} y1={nodes[from].cy}
                 x2={nodes[to].cx} y2={nodes[to].cy}
                 stroke={from === 0 ? '#C5A55A' : '#0a0a0a'}
-                strokeOpacity={isVisible ? (from === 0 ? 0.3 : 0.1) : 0}
-                strokeWidth={from === 0 ? 1 : 0.5}
+                strokeOpacity={isVisible ? (from === 0 ? 0.6 : 0.25) : 0}
+                strokeWidth={from === 0 ? 1.5 : 1}
                 strokeDasharray={from === 0 ? 'none' : '4 4'}
                 style={{ transition: `stroke-opacity 0.8s ease-out ${0.8 + i * 0.12}s` }}
               />
@@ -67,9 +67,9 @@ export default function ScreenIllustration() {
                   key={`pulse${i}`}
                   cx={nodes[from].cx + dx * 0.5}
                   cy={nodes[from].cy + dy * 0.5}
-                  r={isVisible ? 3 : 0}
+                  r={isVisible ? 4 : 0}
                   fill="#C5A55A"
-                  fillOpacity={isVisible ? 0.5 : 0}
+                  fillOpacity={isVisible ? 0.8 : 0}
                   style={{ transition: `all 0.6s ease-out ${1.5 + i * 0.15}s` }}
                 >
                   <animate attributeName="opacity" values="0.5;0.15;0.5" dur="2.5s" repeatCount="indefinite" begin={`${i * 0.4}s`} />
@@ -84,17 +84,17 @@ export default function ScreenIllustration() {
                 <circle
                   cx={node.cx} cy={node.cy} r={node.r}
                   fill={node.main ? '#0a0a0a' : 'none'}
-                  fillOpacity={node.main ? 0.05 : 0}
+                  fillOpacity={node.main ? 0.08 : 0}
                   stroke={node.main ? '#C5A55A' : '#0a0a0a'}
-                  strokeOpacity={node.main ? 0.4 : (node.small ? 0.08 : 0.12)}
-                  strokeWidth={node.main ? 1.5 : 1}
+                  strokeOpacity={node.main ? 0.7 : (node.small ? 0.2 : 0.3)}
+                  strokeWidth={node.main ? 2 : 1}
                 />
                 {/* Inner dot */}
                 <circle
                   cx={node.cx} cy={node.cy}
-                  r={node.main ? 5 : (node.small ? 2 : 3)}
+                  r={node.main ? 6 : (node.small ? 3 : 4)}
                   fill={node.main ? '#C5A55A' : '#0a0a0a'}
-                  fillOpacity={node.main ? 0.5 : (node.small ? 0.12 : 0.2)}
+                  fillOpacity={node.main ? 0.8 : (node.small ? 0.3 : 0.45)}
                 />
                 {/* Label */}
                 <text
@@ -102,8 +102,8 @@ export default function ScreenIllustration() {
                   y={node.cy + node.r + 14}
                   textAnchor="middle"
                   fill={node.main ? '#C5A55A' : '#0a0a0a'}
-                  fillOpacity={node.main ? 0.5 : 0.2}
-                  fontSize={node.main ? 10 : (node.small ? 6 : 8)}
+                  fillOpacity={node.main ? 0.8 : 0.45}
+                  fontSize={node.main ? 11 : (node.small ? 7 : 9)}
                   fontFamily="Roobert, sans-serif"
                   letterSpacing="0.15em"
                 >
@@ -118,13 +118,13 @@ export default function ScreenIllustration() {
                 d="M530 65 Q530 50 545 50 Q550 40 560 40 Q570 40 575 50 Q585 50 585 60 Q590 60 590 67 Q590 75 580 75 L540 75 Q530 75 530 65 Z"
                 fill="none"
                 stroke="#C5A55A"
-                strokeOpacity="0.35"
-                strokeWidth="1"
+                strokeOpacity="0.7"
+                strokeWidth="1.5"
               />
             </g>
 
             {/* Label — bottom */}
-            <text x="550" y="480" textAnchor="middle" fill="#0a0a0a" fillOpacity={isVisible ? 0.2 : 0} fontSize="11" fontFamily="Roobert, sans-serif" letterSpacing="0.2em"
+            <text x="550" y="480" textAnchor="middle" fill="#0a0a0a" fillOpacity={isVisible ? 0.45 : 0} fontSize="12" fontFamily="Roobert, sans-serif" letterSpacing="0.2em"
               style={{ transition: 'fill-opacity 0.6s ease-out 2s' }}
             >
               AXXE CLOUD™ NETWORK
