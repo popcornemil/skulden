@@ -5,7 +5,7 @@ export default function HubSection() {
 
   return (
     <section className="bg-[#fcfbf9]" ref={ref}>
-      <div className="max-w-[1200px] mx-auto w-full relative p-6 md:p-[50px]">
+      <div className="max-w-[1200px] mx-auto w-full relative p-6 pt-0 md:px-[50px] md:pb-[50px] md:pt-0">
 
         <div className="text-center">
           <h2 className={`font-serif text-[32px] md:text-[48px] lg:text-[56px] font-light text-midnight leading-tight transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
