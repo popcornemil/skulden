@@ -19,8 +19,8 @@ function formatDebt(n) {
 }
 
 function formatBiljoner(n) {
-  const biljoner = n / 1_000_000_000_000
-  return biljoner.toFixed(2).replace('.', ',') + ' biljoner kronor'
+  const miljarder = n / 1_000_000_000
+  return miljarder.toFixed(2).replace('.', ',') + ' miljarder kronor'
 }
 
 function formatKronor(n) {
