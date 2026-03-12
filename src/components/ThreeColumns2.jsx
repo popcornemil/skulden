@@ -2,16 +2,12 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const cells = [
   {
-    title: 'Physical Spaces\nAre Becoming Digital',
-    text: 'Retail is evolving into connected environments where technology, content, and data meet. Axxe provides the infrastructure that powers this transformation — from display systems to intelligent software. Designed for modern retail. Built for global scale.',
+    title: 'Slöseriet\nhar ett pris',
+    text: 'När politiken präglas av slöseri, dåliga prioriteringar och brist på ansvar, växer skulden. Det som borde ha använts klokt blir i stället en belastning för framtiden.\n\nOch notan skickas till skattebetalarna.\n\nSkulden handlar inte bara om ekonomi. Den handlar om ansvar. Om prioriteringar. Om vilket Sverige vi lämnar efter oss.',
   },
   {
-    title: 'Designed for\nthe Future of Retail',
-    text: 'Stores are no longer just physical locations. They are media environments. Axxe enables brands to transform spaces into dynamic digital experiences that evolve in real time.',
-  },
-  {
-    title: 'Built for\nGlobal Scale',
-    text: 'From single locations to international retail networks. Axxe infrastructure is designed to scale across thousands of screens, locations, and experiences. Reliable. Flexible. Future-ready.',
+    title: 'Medan du har varit här\nhar skulden fortsatt att växa',
+    text: 'Varje sekund tickar skulden uppåt. Det är just därför Skuldklockan finns.\n\nFör att synliggöra det som annars döljs bakom krångliga siffror och politiska bortförklaringar.\n\nNär människor ser verkligheten svart på vitt blir det svårare att blunda. Och lättare att kräva förändring.',
   },
 ]
 
@@ -20,16 +16,12 @@ export default function ThreeColumns2() {
 
   return (
     <section className="bg-[#fcfbf9]" ref={ref}>
-      <div className="max-w-[1200px] mx-auto w-full grid grid-cols-1 md:grid-cols-3">
+      <div className="max-w-[1200px] mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-4 p-6 pb-0 md:p-[50px] md:pb-0">
         {cells.map((cell, i) => (
-          <div key={i} className={`relative p-6 md:p-[50px] transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: `${i * 150}ms` }}>
-            {i === 0 && <div className="hidden md:block absolute left-0 top-[10px] bottom-[10px] w-px bg-black/7" />}
-            <div className="md:hidden absolute left-0 top-[10px] bottom-[10px] w-px bg-black/7" />
-            <div className="absolute right-0 top-[10px] bottom-[10px] w-px bg-black/7" />
-            <div className="absolute bottom-0 left-[10px] right-[10px] h-px bg-black/7" />
+          <div key={i} className={`relative p-[25px] bg-white rounded-[16px] shadow-md transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: `${i * 150}ms` }}>
 
             <h3 className="font-serif text-[22px] text-midnight mb-3 whitespace-pre-line">{cell.title}</h3>
-            <p className="font-serif text-[16px] text-midnight/60">{cell.text}</p>
+            <p className="font-serif text-[16px] text-midnight/60 whitespace-pre-line">{cell.text}</p>
           </div>
         ))}
       </div>

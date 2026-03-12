@@ -1,31 +1,11 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Neue Haas Grotesk Display';
-  src: url('/fonts/NeueHaasDisplayRoman.ttf') format('truetype');
+  font-family: 'Graphik';
+  src: url('/fonts/Graphik-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
-}
-
-@font-face {
-  font-family: 'Roobert';
-  src: url('/fonts/RoobertTRIAL-Medium.otf') format('opentype');
-  font-weight: 480;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Roobert';
-  src: url('/fonts/RoobertTRIAL-SemiBold.otf') format('opentype');
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Roobert';
-  src: url('/fonts/RoobertTRIAL-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
+  font-display: swap;
 }
 
 @theme {
@@ -39,8 +19,8 @@
   --color-ivory: #F5F0E8;
   --color-warm-gray: #2A2A2A;
 
-  --font-serif: 'Roobert', 'Neue Haas Grotesk Display', 'Inter', system-ui, sans-serif;
-  --font-sans: 'Neue Haas Grotesk Display', 'Inter', system-ui, sans-serif;
+  --font-serif: 'Graphik', system-ui, sans-serif;
+  --font-sans: 'Graphik', system-ui, sans-serif;
 }
 
 @layer base {

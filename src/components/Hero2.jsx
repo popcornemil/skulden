@@ -1,52 +1,113 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
+
+// Sveriges statsskuld ~1 041 miljarder kr (mars 2026), ökar ~1 200 kr/sek
+const BASE_DEBT = 1_041_890_000_000
+const BASE_TIME = new Date('2026-03-12T00:00:00').getTime()
+const RATE_PER_MS = 300.61 / 1000
+
+function formatDebt(n) {
+  const s = Math.floor(n).toString()
+  const groups = []
+  for (let i = s.length; i > 0; i -= 3) {
+    groups.unshift(s.slice(Math.max(0, i - 3), i))
+  }
+  return groups.join(' ')
+}
+
+function formatBiljoner(n) {
+  const biljoner = n / 1_000_000_000_000
+  return biljoner.toFixed(2).replace('.', ',') + ' biljoner kronor'
+}
+
+function formatKronor(n) {
+  const rounded = Math.floor(n * 100) / 100
+  const [whole, dec] = rounded.toFixed(2).split('.')
+  const groups = []
+  for (let i = whole.length; i > 0; i -= 3) {
+    groups.unshift(whole.slice(Math.max(0, i - 3), i))
+  }
+  return groups.join(' ') + ',' + dec
+}
+
+function getTimeLabel(ms) {
+  const secs = Math.floor(ms / 1000)
+  if (secs < 60) return `${secs} sekund${secs !== 1 ? 'er' : ''}`
+  const mins = Math.floor(secs / 60)
+  if (mins < 60) return `${mins} minut${mins !== 1 ? 'er' : ''}`
+  const hours = Math.floor(mins / 60)
+  return `${hours} timm${hours !== 1 ? 'ar' : 'e'}`
+}
 
 export default function Hero2() {
   const [loaded, setLoaded] = useState(false)
+  const [debt, setDebt] = useState(BASE_DEBT)
+  const [increase, setIncrease] = useState(0)
+  const rafRef = useRef(null)
+  const startTimeRef = useRef(Date.now())
 
   useEffect(() => {
     setTimeout(() => setLoaded(true), 100)
   }, [])
 
+  useEffect(() => {
+    const tick = () => {
+      const now = Date.now()
+      const elapsed = now - BASE_TIME
+      setDebt(BASE_DEBT + elapsed * RATE_PER_MS)
+      setIncrease((now - startTimeRef.current) * RATE_PER_MS)
+      rafRef.current = requestAnimationFrame(tick)
+    }
+    rafRef.current = requestAnimationFrame(tick)
+    return () => cancelAnimationFrame(rafRef.current)
+  }, [])
+
   return (
     <section className="bg-[#fcfbf9] pt-16 md:pt-20">
-      <div className="max-w-[1200px] mx-auto w-full min-h-[300px] md:h-[500px] flex flex-col justify-between p-6 md:p-[50px] relative">
+      <div className="max-w-[1200px] mx-auto w-full min-h-[300px] md:h-[500px] flex flex-col justify-center gap-8 p-6 md:p-[50px] relative">
         {/* Left line */}
-        <div className="absolute left-0 top-0 bottom-[10px] w-px bg-black/7" />
         {/* Right line */}
-        <div className="absolute right-0 top-0 bottom-[10px] w-px bg-black/7" />
         {/* Bottom line */}
-        <div className="absolute bottom-0 left-[10px] right-[10px] h-px bg-black/7" />
         <div>
           {/* Tagline */}
           <div className={`mb-4 transition-all duration-1000 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <p className="font-serif text-sm font-medium text-midnight">
-              Unlocking new revenue
+            <p className="font-serif text-sm font-medium text-midnight text-center">
+              Sveriges skuld just nu
             </p>
           </div>
 
-          {/* Heading */}
-          <h1 className={`font-serif text-[32px] md:text-[48px] lg:text-[64px] font-light text-midnight leading-[1.05] tracking-tight max-w-[900px] transition-all duration-1000 delay-200 ${
-            loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
-            AI Infrastructure for<br />the Future of Retail Tech
-          </h1>
+          {/* Debt counter */}
+          <div className={`transition-all duration-1000 delay-200 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className="flex items-baseline justify-center gap-3">
+              <span
+                className="font-serif text-[36px] md:text-[56px] lg:text-[72px] font-light text-midnight leading-[1.05] tracking-tight"
+                style={{ fontVariantNumeric: 'tabular-nums' }}
+              >
+                {formatDebt(debt)}
+              </span>
+              <span className="font-serif text-[20px] md:text-[28px] text-midnight/40 font-light">kr</span>
+            </div>
+            <p className="font-serif text-[16px] md:text-[20px] text-midnight/40 mt-2 text-center">
+              {formatBiljoner(debt)}
+            </p>
+          </div>
         </div>
 
-        {/* Book demo button at bottom */}
-        <div className={`mt-8 md:mt-0 transition-all duration-1000 delay-500 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <a
-            href="#contact"
-            className="group inline-block bg-midnight text-white rounded-full hover:bg-midnight/90 transition-all duration-500"
-            style={{ padding: '16px' }}
+        {/* Increase since visit */}
+        <div className={`text-center transition-all duration-1000 delay-400 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <p className="font-serif text-xs md:text-sm text-midnight/40 uppercase tracking-[0.2em] mb-1">
+            Ökning sedan du kom in på sidan
+          </p>
+          <p
+            className="font-serif text-[24px] md:text-[36px] text-midnight leading-tight"
+            style={{ fontVariantNumeric: 'tabular-nums' }}
           >
-            <span className="relative flex items-center">
-              <span className="w-10 h-10 rounded-full bg-gold flex items-center justify-center shrink-0 absolute left-0 group-hover:left-[calc(100%-40px)] transition-all duration-500 z-10">
-                <span className="text-lg text-midnight">&rarr;</span>
-              </span>
-              <span className="font-serif text-[16px] md:text-[20px] font-medium pl-[52px] pr-2 group-hover:pl-2 group-hover:pr-[52px] transition-all duration-500">Explore the ecosystem</span>
-            </span>
-          </a>
+            {formatKronor(increase)} kr
+          </p>
+          <p className="font-serif text-xs md:text-sm text-midnight/40 mt-1">
+            skulden har ökat med detta belopp på {getTimeLabel(Date.now() - startTimeRef.current)}
+          </p>
         </div>
+
       </div>
     </section>
   )
