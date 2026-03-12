@@ -8,7 +8,7 @@ export default function HubSection() {
       <div className="max-w-[1200px] mx-auto w-full relative p-6 md:p-[50px]">
 
         <div className="text-center">
-          <img src="/skulden-staende.png" alt="Skulden" className={`h-24 md:h-32 mx-auto mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} />
+          <img src="/skulden-liggande-2.png" alt="Skulden" className={`h-32 md:h-44 mx-auto mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} />
           <h2 className={`font-serif text-[32px] md:text-[48px] lg:text-[56px] font-light text-midnight leading-tight transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Dags att sätta press
           </h2>
