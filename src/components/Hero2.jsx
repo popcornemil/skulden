@@ -4,6 +4,10 @@ import { useEffect, useState, useRef } from 'react'
 const BASE_DEBT = 86_642_961_377
 const BASE_TIME = new Date('2026-03-12T00:00:00').getTime()
 const RATE_PER_MS = 300.61 / 1000
+const RATE_PER_SEC = 300.61
+const RATE_PER_MIN = RATE_PER_SEC * 60
+const RATE_PER_HOUR = RATE_PER_SEC * 3600
+const SWEDEN_POP = 10_500_000
 
 function formatDebt(n) {
   const s = Math.floor(n).toString()
@@ -62,11 +66,13 @@ export default function Hero2() {
   }, [])
 
   return (
-    <section id="hero" className="bg-[#fcfbf9] pt-16 md:pt-20 relative">
-      <div className="max-w-[1200px] mx-auto w-full min-h-[calc(100vh-64px)] md:min-h-[calc(100vh-80px)] flex flex-col justify-center gap-8 p-6 pb-16 md:px-[50px] md:pb-24 relative">
-        {/* Left line */}
-        {/* Right line */}
-        {/* Bottom line */}
+    <section id="hero" className="bg-[#fcfbf9] relative">
+      <div className="max-w-[1200px] mx-auto w-full min-h-screen flex flex-col justify-center gap-8 p-6 pb-16 md:px-[50px] md:pb-24 relative">
+
+        <div className={`flex justify-center transition-all duration-1000 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <img src="/skulden-logo.png" alt="Skulden" className="h-18 md:h-24 w-auto" />
+        </div>
+
         <div className="bg-black rounded-[20px] p-8 md:p-12">
           <div>
             {/* Tagline */}
@@ -107,6 +113,32 @@ export default function Hero2() {
             <p className="font-serif text-xs md:text-sm text-white/40 mt-1">
               skulden har ökat med detta belopp på {getTimeLabel(Date.now() - startTimeRef.current)}
             </p>
+          </div>
+
+        </div>
+
+        <div className={`text-center transition-all duration-1000 delay-500 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h2 className="font-serif text-[28px] md:text-[40px] [font-weight:950] text-midnight leading-tight">Sveriges skuldklocka</h2>
+          <p className="font-serif text-[14px] md:text-[16px] text-midnight/60 mt-2">Landets externa skuld ökar med ungefär 1 miljon kronor i timmen</p>
+        </div>
+
+        {/* Stats grid */}
+        <div className={`grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 rounded-[14px] overflow-hidden transition-all duration-1000 delay-500 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ background: 'rgba(0,0,0,0.1)' }}>
+          <div className="bg-black p-5 rounded-tl-[14px] md:rounded-tl-[14px]">
+            <p className="font-serif text-[10px] md:text-xs text-white/40 uppercase tracking-[0.15em] mb-2">Per sekund</p>
+            <p className="font-serif text-[18px] md:text-[22px] text-white font-bold" style={{ fontVariantNumeric: 'tabular-nums' }}>300,61<span className="text-white/40 text-[14px] ml-1">kr</span></p>
+          </div>
+          <div className="bg-black p-5">
+            <p className="font-serif text-[10px] md:text-xs text-white/40 uppercase tracking-[0.15em] mb-2">Per minut</p>
+            <p className="font-serif text-[18px] md:text-[22px] text-white font-bold" style={{ fontVariantNumeric: 'tabular-nums' }}>{formatDebt(RATE_PER_MIN)}<span className="text-white/40 text-[14px] ml-1">kr</span></p>
+          </div>
+          <div className="bg-black p-5">
+            <p className="font-serif text-[10px] md:text-xs text-white/40 uppercase tracking-[0.15em] mb-2">Per timme</p>
+            <p className="font-serif text-[18px] md:text-[22px] text-white font-bold" style={{ fontVariantNumeric: 'tabular-nums' }}>{formatDebt(RATE_PER_HOUR)}<span className="text-white/40 text-[14px] ml-1">kr</span></p>
+          </div>
+          <div className="bg-black p-5">
+            <p className="font-serif text-[10px] md:text-xs text-white/40 uppercase tracking-[0.15em] mb-2">Per invånare</p>
+            <p className="font-serif text-[18px] md:text-[22px] text-white font-bold" style={{ fontVariantNumeric: 'tabular-nums' }}>{formatDebt(debt / SWEDEN_POP)}<span className="text-white/40 text-[14px] ml-1">kr</span></p>
           </div>
         </div>
 

@@ -4,9 +4,9 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 const BASE_TIME = new Date('2026-03-12T00:00:00').getTime()
 
 const cities = [
-  { name: 'Stockholm', debt: 86_642_961_377, ratePerMs: 300.61 / 1000 },
-  { name: 'Göteborg', debt: 51_000_000_000, ratePerMs: 177.36 / 1000 },
-  { name: 'Malmö', debt: 30_000_000_000, ratePerMs: 105.21 / 1000 },
+  { name: 'Stockholm', debt: 86_642_961_377, ratePerMs: 300.61 / 1000, label: 'Reella skulder' },
+  { name: 'Göteborg', debt: 51_000_000_000, ratePerMs: 177.36 / 1000, label: 'Uppskattade skulder' },
+  { name: 'Malmö', debt: 30_000_000_000, ratePerMs: 105.21 / 1000, label: 'Uppskattade skulder' },
 ]
 
 function formatKr(n) {
@@ -40,6 +40,7 @@ function CityCard({ city, isVisible, delay }) {
       <p className="font-serif text-[14px] text-midnight/40 mb-2">{city.name}</p>
       <h3 className="font-serif text-[20px] text-midnight mb-1 whitespace-nowrap" style={{ fontVariantNumeric: 'tabular-nums' }}>{formatKr(debt)} kr</h3>
       <p className="font-serif text-[14px] text-[#e65245]" style={{ fontVariantNumeric: 'tabular-nums' }}>(+{formatKr(added)} kr sedan du kom in)</p>
+      <p className="font-serif text-[11px] text-midnight/30 mt-2">{city.label}</p>
     </div>
   )
 }

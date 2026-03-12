@@ -31,7 +31,7 @@
   body {
     font-family: var(--font-sans);
     font-size: 18px;
-    background: var(--color-midnight);
+    background: #fcfbf9;
     color: #fff;
     -webkit-font-smoothing: antialiased;
   }
