@@ -66,7 +66,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright row */}
-        <div className="relative px-6 md:px-[50px] py-2">
+        <div className="relative px-6 md:px-[50px] pt-2 pb-[50px]">
           <p className="font-serif text-midnight/20 text-xs text-center">
             &copy; {new Date().getFullYear()} Skattebetalarna. Alla rättigheter förbehållna.
           </p>
