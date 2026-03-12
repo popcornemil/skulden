@@ -8,17 +8,17 @@ export default function HubSection() {
       <div className="max-w-[1200px] mx-auto w-full relative p-6 md:p-[50px]">
 
         <div className="text-center">
-          <img src="/skulden-liggande-2.png" alt="Skulden" className={`h-32 md:h-44 mx-auto mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} />
           <h2 className={`font-serif text-[32px] md:text-[48px] lg:text-[56px] font-light text-midnight leading-tight transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Dags att sätta press
           </h2>
           <p className={`font-serif text-[16px] text-midnight/60 mt-4 max-w-[600px] mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Följ Skulden.se. Följ Skattebetalarna. Bli medlem och hjälp till att sätta stopp för slöseriet. Ju fler vi är, desto svårare blir det att ignorera verkligheten.
           </p>
-          <div className={`mt-8 flex flex-col md:flex-row items-center justify-center gap-4 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className={`mt-8 flex flex-col items-center gap-10 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <a href="#" className="px-8 py-4 bg-[#e65245] text-white font-serif text-[16px] font-medium rounded-full hover:bg-[#d4453a] transition-colors duration-300">
               Bli medlem idag
             </a>
+            <img src="/skulden-liggande-2.png" alt="Skulden" className="h-32 md:h-44 mx-auto" />
           </div>
           <p className={`mt-6 font-serif text-[14px] text-midnight/40 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Dela</p>
           <div className={`mt-3 flex items-center justify-center gap-3 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
