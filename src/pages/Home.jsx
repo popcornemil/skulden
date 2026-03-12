@@ -22,16 +22,6 @@ export default function Home() {
       <TwoColumns />
       <ThreeColumns />
       <OneColumn />
-
-      <section className="bg-[#fcfbf9]">
-        <div className="max-w-[1200px] mx-auto w-full relative p-6 md:p-[50px]">
-          <div className="rounded-[16px] overflow-hidden shadow-md">
-            <video autoPlay muted loop playsInline className="w-full h-auto">
-              <source src="/skulden_sno_3.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </div>
-      </section>
       <ThreeColumns3 />
       <ThreeColumns2 />
       <DarkCard />
