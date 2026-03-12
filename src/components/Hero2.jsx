@@ -18,6 +18,17 @@ function formatDebt(n) {
   return groups.join(' ')
 }
 
+function FixedDigits({ value, className, style }) {
+  const chars = value.split('')
+  return (
+    <span className={className} style={style}>
+      {chars.map((ch, i) => (
+        <span key={i} style={{ display: 'inline-block', width: ch === ' ' ? '0.25em' : '0.52em', textAlign: 'center' }}>{ch}</span>
+      ))}
+    </span>
+  )
+}
+
 function formatBiljoner(n) {
   const miljarder = n / 1_000_000_000
   return miljarder.toFixed(2).replace('.', ',') + ' miljarder kronor'
@@ -70,12 +81,12 @@ export default function Hero2() {
       <div className="max-w-[1200px] mx-auto w-full min-h-screen flex flex-col justify-center gap-8 p-6 pb-0 md:px-[50px] md:pb-0 relative">
 
         <div className={`flex justify-center transition-all duration-1000 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <img src="/skulden-logo.png" alt="Skulden" className="h-14 md:h-20 w-auto" />
+          <img src="/skulden-ny.png" alt="Skulden" className="h-14 md:h-20 w-auto" />
         </div>
 
         <div className={`rounded-[16px] overflow-hidden shadow-md transition-all duration-1000 delay-100 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <video autoPlay muted loop playsInline className="w-full h-auto">
-            <source src="/skulden_sno_3.mp4" type="video/mp4" />
+            <source src="/skulden_sno_4.mp4" type="video/mp4" />
           </video>
         </div>
 
@@ -91,12 +102,11 @@ export default function Hero2() {
             {/* Debt counter */}
             <div className={`transition-all duration-1000 delay-200 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <div className="flex items-baseline justify-center gap-3">
-                <span
-                  className="text-[36px] md:text-[56px] lg:text-[72px] text-[#e65245] leading-[1.05] tracking-tight"
-                  style={{ fontFamily: 'Anton, sans-serif', fontVariantNumeric: 'tabular-nums' }}
-                >
-                  {formatDebt(debt)}
-                </span>
+                <FixedDigits
+                  value={formatDebt(debt)}
+                  className="text-[36px] md:text-[56px] lg:text-[72px] text-[#e65245] leading-[1.05]"
+                  style={{ fontFamily: 'Anton, sans-serif' }}
+                />
                 <span className="font-serif text-[20px] md:text-[28px] text-midnight/40 font-light">kr</span>
               </div>
               <p className="font-serif text-[16px] md:text-[20px] text-midnight/40 mt-2 text-center">
@@ -110,12 +120,13 @@ export default function Hero2() {
             <p className="font-serif text-xs md:text-sm text-midnight uppercase tracking-[0.2em] mb-1">
               sedan du öppnade sidan
             </p>
-            <p
-              className="text-[24px] md:text-[36px] text-midnight leading-tight"
-              style={{ fontFamily: 'Anton, sans-serif', fontVariantNumeric: 'tabular-nums' }}
-            >
-              {formatKronor(increase)} kr
-            </p>
+            <span className="block">
+              <FixedDigits
+                value={formatKronor(increase) + ' kr'}
+                className="text-[24px] md:text-[36px] text-midnight leading-tight"
+                style={{ fontFamily: 'Anton, sans-serif' }}
+              />
+            </span>
             <p className="font-serif text-xs md:text-sm text-midnight/40 mt-1">
               skulden har ökat med detta belopp på {getTimeLabel(Date.now() - startTimeRef.current)}
             </p>
@@ -132,19 +143,19 @@ export default function Hero2() {
         <div className={`grid grid-cols-2 md:grid-cols-4 gap-4 transition-all duration-1000 delay-500 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="bg-white p-[25px] rounded-[16px] shadow-md">
             <p className="font-serif text-[10px] md:text-xs text-midnight uppercase tracking-[0.15em] mb-2">Per sekund</p>
-            <p className="text-[18px] md:text-[22px] text-midnight" style={{ fontFamily: 'Anton, sans-serif', fontVariantNumeric: 'tabular-nums' }}>300,61<span className="text-midnight/40 text-[14px] ml-1">kr</span></p>
+            <p className="text-[26px] text-midnight" style={{ fontFamily: 'Anton, sans-serif', fontVariantNumeric: 'tabular-nums' }}>300,61<span className="text-midnight/40 text-[14px] ml-1">kr</span></p>
           </div>
           <div className="bg-white p-[25px] rounded-[16px] shadow-md">
             <p className="font-serif text-[10px] md:text-xs text-midnight uppercase tracking-[0.15em] mb-2">Per minut</p>
-            <p className="text-[18px] md:text-[22px] text-midnight" style={{ fontFamily: 'Anton, sans-serif', fontVariantNumeric: 'tabular-nums' }}>{formatDebt(RATE_PER_MIN)}<span className="text-midnight/40 text-[14px] ml-1">kr</span></p>
+            <p className="text-[26px] text-midnight" style={{ fontFamily: 'Anton, sans-serif', fontVariantNumeric: 'tabular-nums' }}>{formatDebt(RATE_PER_MIN)}<span className="text-midnight/40 text-[14px] ml-1">kr</span></p>
           </div>
           <div className="bg-white p-[25px] rounded-[16px] shadow-md">
             <p className="font-serif text-[10px] md:text-xs text-midnight uppercase tracking-[0.15em] mb-2">Per timme</p>
-            <p className="text-[18px] md:text-[22px] text-midnight" style={{ fontFamily: 'Anton, sans-serif', fontVariantNumeric: 'tabular-nums' }}>{formatDebt(RATE_PER_HOUR)}<span className="text-midnight/40 text-[14px] ml-1">kr</span></p>
+            <p className="text-[26px] text-midnight" style={{ fontFamily: 'Anton, sans-serif', fontVariantNumeric: 'tabular-nums' }}>{formatDebt(RATE_PER_HOUR)}<span className="text-midnight/40 text-[14px] ml-1">kr</span></p>
           </div>
           <div className="bg-white p-[25px] rounded-[16px] shadow-md">
             <p className="font-serif text-[10px] md:text-xs text-midnight uppercase tracking-[0.15em] mb-2">Per stockholmare</p>
-            <p className="text-[18px] md:text-[22px] text-midnight" style={{ fontFamily: 'Anton, sans-serif', fontVariantNumeric: 'tabular-nums' }}>{formatDebt(debt / STOCKHOLM_POP)}<span className="text-midnight/40 text-[14px] ml-1">kr</span></p>
+            <p className="text-[26px] text-midnight" style={{ fontFamily: 'Anton, sans-serif', fontVariantNumeric: 'tabular-nums' }}>{formatDebt(debt / STOCKHOLM_POP)}<span className="text-midnight/40 text-[14px] ml-1">kr</span></p>
           </div>
         </div>
 

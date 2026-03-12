@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Skulden logo */}
         <div className="relative p-6 pb-2 md:p-[50px] md:pb-2 flex justify-center">
           <div className={`flex flex-col items-center gap-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <img src="/skulden-liggande-2.png" alt="Skulden" className="h-32 md:h-44 mx-auto" />
+            <img src="/skulden-ny.png" alt="Skulden" className="h-32 md:h-44 mx-auto" />
           </div>
         </div>
 
