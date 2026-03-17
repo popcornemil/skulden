@@ -8,6 +8,22 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Mont Blanc';
+  src: url('/fonts/MontBlanc-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Now';
+  src: url('/fonts/HelveticaNowDisplay.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-gold: #C5A55A;
   --color-gold-light: #D4B96E;
@@ -19,8 +35,9 @@
   --color-ivory: #F5F0E8;
   --color-warm-gray: #2A2A2A;
 
-  --font-serif: 'Graphik', system-ui, sans-serif;
-  --font-sans: 'Graphik', system-ui, sans-serif;
+  --font-serif: 'Helvetica Now', 'Graphik', system-ui, sans-serif;
+  --font-sans: 'Helvetica Now', 'Graphik', system-ui, sans-serif;
+  --font-heading: 'Mont Blanc', 'Graphik', system-ui, sans-serif;
 }
 
 @layer base {
@@ -34,6 +51,11 @@
     background: #fcfbf9;
     color: #fff;
     -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
   }
 
   ::selection {

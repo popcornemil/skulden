@@ -20,7 +20,7 @@ export default function ThreeColumns2() {
         {cells.map((cell, i) => (
           <div key={i} className={`relative p-[25px] bg-white rounded-[16px] shadow-md transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: `${i * 150}ms` }}>
 
-            <h3 className="font-serif text-[22px] text-midnight mb-3 whitespace-pre-line">{cell.title}</h3>
+            <h3 className="font-heading text-[22px] text-midnight mb-3 whitespace-pre-line">{cell.title}</h3>
             <p className="font-serif text-[16px] text-midnight/60 whitespace-pre-line">{cell.text}</p>
           </div>
         ))}

@@ -23,7 +23,7 @@ function FixedDigits({ value, className, style }) {
   return (
     <span className={className} style={style}>
       {chars.map((ch, i) => (
-        <span key={i} style={{ display: 'inline-block', width: ch === ' ' ? '0.25em' : '0.52em', textAlign: 'center' }}>{ch}</span>
+        <span key={i} style={{ display: 'inline-block', width: ch === ' ' ? '0.25em' : undefined, textAlign: 'center' }}>{ch}</span>
       ))}
     </span>
   )
@@ -105,7 +105,7 @@ export default function Hero2() {
                 <FixedDigits
                   value={formatDebt(debt)}
                   className="text-[36px] md:text-[56px] lg:text-[72px] text-[#e65245] leading-[1.05]"
-                  style={{ fontFamily: 'Anton, sans-serif' }}
+                  style={{ fontFamily: 'Mont Blanc, sans-serif' }}
                 />
                 <span className="font-serif text-[20px] md:text-[28px] text-midnight/40 font-light">kr</span>
               </div>
@@ -124,7 +124,7 @@ export default function Hero2() {
               <FixedDigits
                 value={formatKronor(increase) + ' kr'}
                 className="text-[24px] md:text-[36px] text-midnight leading-tight"
-                style={{ fontFamily: 'Anton, sans-serif' }}
+                style={{ fontFamily: 'Mont Blanc, sans-serif' }}
               />
             </span>
             <p className="font-serif text-xs md:text-sm text-midnight/40 mt-1">
@@ -135,7 +135,7 @@ export default function Hero2() {
         </div>
 
         <div className={`text-center transition-all duration-1000 delay-500 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="font-serif text-[28px] md:text-[40px] font-light text-midnight leading-tight">Stockholms skuldklocka</h2>
+          <h2 className="font-heading text-[28px] md:text-[40px] font-light text-midnight leading-tight">Stockholms skuldklocka</h2>
           <p className="font-serif text-[14px] md:text-[16px] text-midnight/60 mt-2">Stadens externa skuld ökar med ungefär 1 miljon kronor i timmen</p>
         </div>
 
@@ -143,19 +143,19 @@ export default function Hero2() {
         <div className={`grid grid-cols-2 md:grid-cols-4 gap-4 transition-all duration-1000 delay-500 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="bg-white p-[25px] rounded-[16px] shadow-md">
             <p className="font-serif text-[10px] md:text-xs text-midnight uppercase tracking-[0.15em] mb-2">Per sekund</p>
-            <p className="text-[26px] text-midnight" style={{ fontFamily: 'Anton, sans-serif', fontVariantNumeric: 'tabular-nums' }}>300,61<span className="text-midnight/40 text-[14px] ml-1">kr</span></p>
+            <p className="text-[26px] text-midnight" style={{ fontFamily: 'Mont Blanc, sans-serif', fontVariantNumeric: 'tabular-nums' }}>300,61<span className="text-midnight/40 text-[14px] ml-1">kr</span></p>
           </div>
           <div className="bg-white p-[25px] rounded-[16px] shadow-md">
             <p className="font-serif text-[10px] md:text-xs text-midnight uppercase tracking-[0.15em] mb-2">Per minut</p>
-            <p className="text-[26px] text-midnight" style={{ fontFamily: 'Anton, sans-serif', fontVariantNumeric: 'tabular-nums' }}>{formatDebt(RATE_PER_MIN)}<span className="text-midnight/40 text-[14px] ml-1">kr</span></p>
+            <p className="text-[26px] text-midnight" style={{ fontFamily: 'Mont Blanc, sans-serif', fontVariantNumeric: 'tabular-nums' }}>{formatDebt(RATE_PER_MIN)}<span className="text-midnight/40 text-[14px] ml-1">kr</span></p>
           </div>
           <div className="bg-white p-[25px] rounded-[16px] shadow-md">
             <p className="font-serif text-[10px] md:text-xs text-midnight uppercase tracking-[0.15em] mb-2">Per timme</p>
-            <p className="text-[26px] text-midnight" style={{ fontFamily: 'Anton, sans-serif', fontVariantNumeric: 'tabular-nums' }}>{formatDebt(RATE_PER_HOUR)}<span className="text-midnight/40 text-[14px] ml-1">kr</span></p>
+            <p className="text-[26px] text-midnight" style={{ fontFamily: 'Mont Blanc, sans-serif', fontVariantNumeric: 'tabular-nums' }}>{formatDebt(RATE_PER_HOUR)}<span className="text-midnight/40 text-[14px] ml-1">kr</span></p>
           </div>
           <div className="bg-white p-[25px] rounded-[16px] shadow-md">
             <p className="font-serif text-[10px] md:text-xs text-midnight uppercase tracking-[0.15em] mb-2">Per stockholmare</p>
-            <p className="text-[26px] text-midnight" style={{ fontFamily: 'Anton, sans-serif', fontVariantNumeric: 'tabular-nums' }}>{formatDebt(debt / STOCKHOLM_POP)}<span className="text-midnight/40 text-[14px] ml-1">kr</span></p>
+            <p className="text-[26px] text-midnight" style={{ fontFamily: 'Mont Blanc, sans-serif', fontVariantNumeric: 'tabular-nums' }}>{formatDebt(debt / STOCKHOLM_POP)}<span className="text-midnight/40 text-[14px] ml-1">kr</span></p>
           </div>
         </div>
 

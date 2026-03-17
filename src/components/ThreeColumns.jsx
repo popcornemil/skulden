@@ -37,7 +37,7 @@ function TeacherCard({ isVisible }) {
   return (
     <div className={`relative p-[25px] bg-white rounded-[16px] shadow-md transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
 
-      <h3 className="text-[26px] text-midnight mb-1" style={{ fontFamily: 'Anton, sans-serif', fontVariantNumeric: 'tabular-nums' }}>{formatNumber(count)}</h3>
+      <h3 className="text-[26px] text-midnight mb-1" style={{ fontFamily: 'Mont Blanc, sans-serif', fontVariantNumeric: 'tabular-nums' }}>{formatNumber(count)}</h3>
       <p className="font-serif text-[14px] text-[#e65245] mb-2" style={{ fontVariantNumeric: 'tabular-nums' }}>(+{added} sedan du kom in)</p>
       <p className="font-serif text-[16px] text-midnight/60"><span className="font-bold text-midnight">förskollärare</span> kunde anställas för ett helt år</p>
     </div>
@@ -66,7 +66,7 @@ function PoliceCard({ isVisible }) {
   return (
     <div className={`relative p-[25px] bg-white rounded-[16px] shadow-md transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '100ms' }}>
 
-      <h3 className="text-[26px] text-midnight mb-1" style={{ fontFamily: 'Anton, sans-serif', fontVariantNumeric: 'tabular-nums' }}>{formatNumber(count)}</h3>
+      <h3 className="text-[26px] text-midnight mb-1" style={{ fontFamily: 'Mont Blanc, sans-serif', fontVariantNumeric: 'tabular-nums' }}>{formatNumber(count)}</h3>
       <p className="font-serif text-[14px] text-[#e65245] mb-2" style={{ fontVariantNumeric: 'tabular-nums' }}>(+{added} sedan du kom in)</p>
       <p className="font-serif text-[16px] text-midnight/60">nya <span className="font-bold text-midnight">poliser</span> kunde anställas för ett helt år</p>
     </div>
@@ -95,7 +95,7 @@ function LunchCard({ isVisible }) {
   return (
     <div className={`relative p-[25px] bg-white rounded-[16px] shadow-md transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '200ms' }}>
 
-      <h3 className="text-[26px] text-midnight mb-1" style={{ fontFamily: 'Anton, sans-serif', fontVariantNumeric: 'tabular-nums' }}>{formatNumber(count)}</h3>
+      <h3 className="text-[26px] text-midnight mb-1" style={{ fontFamily: 'Mont Blanc, sans-serif', fontVariantNumeric: 'tabular-nums' }}>{formatNumber(count)}</h3>
       <p className="font-serif text-[14px] text-[#e65245] mb-2" style={{ fontVariantNumeric: 'tabular-nums' }}>(+{added} sedan du kom in)</p>
       <p className="font-serif text-[16px] text-midnight/60"><span className="font-bold text-midnight">skolluncher</span> varje dag ett helt läsår</p>
     </div>
@@ -124,7 +124,7 @@ function ElderCard({ isVisible }) {
   return (
     <div className={`relative p-[25px] bg-white rounded-[16px] shadow-md transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '300ms' }}>
 
-      <h3 className="text-[26px] text-midnight mb-1" style={{ fontFamily: 'Anton, sans-serif', fontVariantNumeric: 'tabular-nums' }}>{formatNumber(count)}</h3>
+      <h3 className="text-[26px] text-midnight mb-1" style={{ fontFamily: 'Mont Blanc, sans-serif', fontVariantNumeric: 'tabular-nums' }}>{formatNumber(count)}</h3>
       <p className="font-serif text-[14px] text-[#e65245] mb-2" style={{ fontVariantNumeric: 'tabular-nums' }}>(+{added} sedan du kom in)</p>
       <p className="font-serif text-[16px] text-midnight/60">platser på <span className="font-bold text-midnight">äldreboende</span> under ett helt år</p>
     </div>
