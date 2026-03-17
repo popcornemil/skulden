@@ -23,7 +23,7 @@ function FixedDigits({ value, className, style }) {
   return (
     <span className={className} style={style}>
       {chars.map((ch, i) => (
-        <span key={i} style={{ display: 'inline-block', width: ch === ' ' ? '0.25em' : undefined, textAlign: 'center' }}>{ch}</span>
+        <span key={i} style={{ display: 'inline-block', width: ch === ' ' ? '0.25em' : '1ch', textAlign: 'center' }}>{ch}</span>
       ))}
     </span>
   )

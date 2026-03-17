@@ -38,7 +38,7 @@ function CityCard({ city, isVisible, delay }) {
   return (
     <div className={`relative p-[25px] bg-white rounded-[16px] shadow-md transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: `${delay}ms` }}>
       <p className="font-serif text-[14px] text-midnight/40 mb-2">{city.name}</p>
-      <h3 className="text-[26px] text-midnight mb-1 whitespace-nowrap" style={{ fontFamily: 'Mont Blanc, sans-serif', fontVariantNumeric: 'tabular-nums' }}>{formatKr(debt)} kr</h3>
+      <h3 className="text-[20px] text-midnight mb-1 whitespace-nowrap" style={{ fontFamily: 'Mont Blanc, sans-serif', fontVariantNumeric: 'tabular-nums' }}>{formatKr(debt)} kr</h3>
       <p className="font-serif text-[14px] text-[#e65245]" style={{ fontVariantNumeric: 'tabular-nums' }}>(+{formatKr(added)} kr sedan du kom in)</p>
       <p className="font-serif text-[11px] text-midnight/30 mt-2">{city.label}</p>
     </div>
