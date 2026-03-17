@@ -90,6 +90,11 @@ export default function Hero2() {
           </video>
         </div>
 
+        <div className={`text-center transition-all duration-1000 delay-200 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h2 className="font-heading text-[28px] md:text-[40px] font-light text-midnight leading-tight">Stockholms skuldklocka</h2>
+          <p className="font-serif text-[14px] md:text-[16px] text-midnight/60 mt-2">Stadens externa skuld ökar med ungefär 1 miljon kronor i timmen</p>
+        </div>
+
         <div className="bg-white rounded-[20px] p-8 md:p-12 shadow-md">
           <div>
             {/* Tagline */}
@@ -132,11 +137,6 @@ export default function Hero2() {
             </p>
           </div>
 
-        </div>
-
-        <div className={`text-center transition-all duration-1000 delay-500 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="font-heading text-[28px] md:text-[40px] font-light text-midnight leading-tight">Stockholms skuldklocka</h2>
-          <p className="font-serif text-[14px] md:text-[16px] text-midnight/60 mt-2">Stadens externa skuld ökar med ungefär 1 miljon kronor i timmen</p>
         </div>
 
         {/* Stats grid */}
