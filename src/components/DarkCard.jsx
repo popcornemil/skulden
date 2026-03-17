@@ -4,7 +4,7 @@ export default function DarkCard() {
   const [ref, isVisible] = useScrollReveal()
 
   return (
-    <section className="bg-[#fcfbf9]" ref={ref}>
+    <section className="bg-[#0a0a0a]" ref={ref}>
       <div className="max-w-[1200px] mx-auto w-full relative p-6 md:p-[50px]">
         <div className={`bg-midnight rounded-[16px] p-[50px] shadow-md transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h3 className="font-heading text-[22px] text-white mb-3">Hur vänder vi utvecklingen?</h3>

@@ -15,13 +15,13 @@ export default function ThreeColumns2() {
   const [ref, isVisible] = useScrollReveal()
 
   return (
-    <section className="bg-[#fcfbf9]" ref={ref}>
+    <section className="bg-[#0a0a0a]" ref={ref}>
       <div className="max-w-[1200px] mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-4 p-6 pb-0 md:p-[50px] md:pb-0">
         {cells.map((cell, i) => (
-          <div key={i} className={`relative p-[25px] bg-white rounded-[16px] shadow-md transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: `${i * 150}ms` }}>
+          <div key={i} className={`relative p-[25px] bg-[#1a0a0a] rounded-[16px] border border-white/5 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: `${i * 150}ms` }}>
 
-            <h3 className="font-heading text-[22px] text-midnight mb-3 whitespace-pre-line leading-[0.9]">{cell.title}</h3>
-            <p className="font-serif text-[16px] text-midnight/60 whitespace-pre-line">{cell.text}</p>
+            <h3 className="font-heading text-[22px] text-white mb-3 whitespace-pre-line leading-[0.9]">{cell.title}</h3>
+            <p className="font-serif text-[16px] text-white/50 whitespace-pre-line">{cell.text}</p>
           </div>
         ))}
       </div>
