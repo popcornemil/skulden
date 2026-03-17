@@ -39,7 +39,7 @@ export default function AISection() {
         {/* Column 1 — Bar chart */}
         <div className="relative p-[25px] bg-[#1a0a0a] rounded-[16px] border border-white/5">
 
-          <h3 className={`font-heading text-[22px] text-white mb-6 transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Så snabbt växer skulden</h3>
+          <h3 className={`font-heading text-[22px] text-white mb-6 transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>VARJE SEKUND RÄKNAS</h3>
           <div className="flex items-end gap-3 h-[180px] relative">
             {[0, 25, 50, 75, 100].map((pct) => (
               <div key={pct} className="absolute left-0 right-0 h-px bg-white/5" style={{ bottom: `${pct}%` }} />

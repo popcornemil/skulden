@@ -27,7 +27,8 @@ export default function Home2() {
       <OneColumn />
       <Section4 />
       <Section5 />
-      <Section6 />
+      <DarkCard />
+      <AISection />
       <HubSection />
       <VideoSection />
       <Footer />

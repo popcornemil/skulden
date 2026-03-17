@@ -66,9 +66,10 @@ export default function TwoColumns() {
         <img src="https://pub-54cb667dfd3547d5806ae33fef3e81d4.r2.dev/skulden-skuldklockan-tickar/galleri-2-tunnelbana.png" alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-[#0a0a0a]" />
+        <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-black to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-transparent to-[#0a0a0a]" />
       </div>
-      <div className="relative z-10 w-full p-6 md:px-[100px] md:py-[80px]">
+      <div className="relative z-10 w-full p-6 md:px-[100px] py-[50px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-end">
           {/* Left column — heading + body */}
           <div>
@@ -88,22 +89,22 @@ export default function TwoColumns() {
               på {getTimeLabel(Date.now() - startRef.current)}
             </p>
 
-            <div className="grid grid-cols-4 gap-3 mt-6">
+            <div className="grid grid-cols-2 gap-3 mt-6">
               <div className="p-[16px] rounded-[12px]">
                 <p className="font-serif text-[9px] md:text-[10px] text-white/30 uppercase tracking-[0.15em] mb-1">Per sekund</p>
-                <p className="text-[20px] text-white" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>300,61<span className="text-white/40 text-[11px] ml-1">kr</span></p>
+                <p className="text-[24px] md:text-[28px] text-white" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>300,61<span className="text-white/40 text-[11px] ml-1">kr</span></p>
               </div>
               <div className="p-[16px] rounded-[12px]">
                 <p className="font-serif text-[9px] md:text-[10px] text-white/30 uppercase tracking-[0.15em] mb-1">Per minut</p>
-                <p className="text-[20px] text-white" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatDebt(RATE_PER_MIN)}<span className="text-white/40 text-[11px] ml-1">kr</span></p>
+                <p className="text-[24px] md:text-[28px] text-white" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatDebt(RATE_PER_MIN)}<span className="text-white/40 text-[11px] ml-1">kr</span></p>
               </div>
               <div className="p-[16px] rounded-[12px]">
                 <p className="font-serif text-[9px] md:text-[10px] text-white/30 uppercase tracking-[0.15em] mb-1">Per timme</p>
-                <p className="text-[20px] text-white" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatDebt(RATE_PER_HOUR)}<span className="text-white/40 text-[11px] ml-1">kr</span></p>
+                <p className="text-[24px] md:text-[28px] text-white" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatDebt(RATE_PER_HOUR)}<span className="text-white/40 text-[11px] ml-1">kr</span></p>
               </div>
               <div className="p-[16px] rounded-[12px]">
                 <p className="font-serif text-[9px] md:text-[10px] text-white/30 uppercase tracking-[0.15em] mb-1">Per dag</p>
-                <p className="text-[20px] text-white" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatDebt(RATE_PER_SEC * 86400)}<span className="text-white/40 text-[11px] ml-1">kr</span></p>
+                <p className="text-[24px] md:text-[28px] text-white" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatDebt(RATE_PER_SEC * 86400)}<span className="text-white/40 text-[11px] ml-1">kr</span></p>
               </div>
             </div>
           </div>

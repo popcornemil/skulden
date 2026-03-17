@@ -47,7 +47,7 @@ export default function Section5() {
     <section className="bg-[#0a0a0a]" ref={ref}>
       <div className="max-w-[1200px] mx-auto w-full relative p-6 pb-[50px] md:px-[50px] md:pt-[50px] md:pb-[50px]">
 
-        <h2 className={`font-heading text-[32px] md:text-[48px] lg:text-[64px] font-light text-white mb-4 text-center leading-[0.9] transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Medan du har<br />varit här har skulden<br />fortsatt att växa</h2>
+        <h2 className={`font-heading text-[32px] md:text-[48px] lg:text-[64px] font-light text-white mb-4 text-center leading-[1.05] transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Medan du har<br />varit här har skulden<br />fortsatt att växa</h2>
         <p className={`font-serif text-[16px] text-white/60 text-center max-w-[600px] mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Varje sekund tickar skulden uppåt. Det är just därför Skuldklockan finns. För att synliggöra det som annars döljs bakom krångliga siffror och politiska bortförklaringar. När människor ser verkligheten svart på vitt blir det svårare att blunda. Och lättare att kräva förändring.</p>
 
         <div className={`flex justify-center mt-8 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>

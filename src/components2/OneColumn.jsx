@@ -34,7 +34,7 @@ function CountCard({ cost, isVisible, delay, label, description }) {
 
   return (
     <div className={`relative p-[16px] rounded-[12px] text-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: `${delay}ms` }}>
-      <h3 className="text-[20px] text-white mb-1" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatNumber(count)}</h3>
+      <h3 className="text-[24px] md:text-[28px] text-white mb-1" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatNumber(count)}</h3>
       <p className="font-serif text-[12px] text-white/40">{description}</p>
     </div>
   )

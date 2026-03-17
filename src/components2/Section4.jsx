@@ -61,7 +61,7 @@ function CityCounter({ name, label, debt, ratePerMs }) {
 
   return (
     <div className="text-right">
-      <p className="font-serif text-[9px] md:text-[10px] text-white/30 uppercase tracking-[0.15em] mb-1">{name}</p>
+      <p className="font-serif text-[9px] md:text-[10px] text-white uppercase tracking-[0.15em] mb-1">{name}</p>
       <p className="text-[28px] md:text-[36px] text-white" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatDebt(current)}<span className="text-white/40 text-[14px] ml-1">kr</span></p>
       <p className="font-serif text-[9px] text-white/20 mt-1">{label}</p>
     </div>
@@ -91,7 +91,7 @@ export default function Section4() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-[#0a0a0a]" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-transparent to-[#0a0a0a]" />
       </div>
-      <div className="relative z-10 w-full p-6 md:px-[100px] md:py-[80px]">
+      <div className="relative z-10 w-full p-6 md:px-[100px] py-[100px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-end">
           {/* Left column — heading + body */}
           <div>

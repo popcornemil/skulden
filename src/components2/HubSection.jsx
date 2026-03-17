@@ -9,7 +9,7 @@ export default function HubSection() {
 
         <div className="text-center">
           <h2 className={`font-heading text-[32px] md:text-[48px] lg:text-[56px] font-light text-white leading-tight transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            Dags att sätta press
+            DET HÄR SKA ALLA SVENSKAR SE
           </h2>
           <p className={`font-serif text-[16px] text-white/60 mt-4 max-w-[600px] mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Följ Skulden.se. Följ Skattebetalarna. Bli medlem och hjälp till att sätta stopp för slöseriet. Ju fler vi är, desto svårare blir det att ignorera verkligheten.

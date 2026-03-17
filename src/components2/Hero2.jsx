@@ -80,14 +80,7 @@ export default function Hero2() {
     <section id="hero" className="bg-[#0a0a0a] relative">
       {/* Fullwidth video background */}
       <div className="relative min-h-screen flex flex-col justify-center">
-        <div className={`absolute inset-0 overflow-hidden transition-all duration-1000 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
-          <video autoPlay muted loop playsInline className="w-full h-full object-cover">
-            <source src="https://pub-54cb667dfd3547d5806ae33fef3e81d4.r2.dev/skulden-skuldklockan-tickar/film-skulden.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-black/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent" />
-          <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, transparent 40%, #0a0a0a 100%)' }} />
-        </div>
+        <div className="absolute inset-0 bg-black" />
 
         <div className="relative z-10 flex flex-col items-center justify-center gap-6 p-6 md:px-[50px] max-w-[1200px] mx-auto w-full">
           <div className={`text-center transition-all duration-1000 delay-100 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
