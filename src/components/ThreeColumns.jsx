@@ -37,7 +37,7 @@ function TeacherCard({ isVisible }) {
   return (
     <div className={`relative p-[25px] bg-[#1a0a0a] rounded-[16px] border border-white/5 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
 
-      <h3 className="text-[26px] text-[#e65245] mb-1" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatNumber(count)}</h3>
+      <h3 className="text-[32px] text-[#e65245] mb-1" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatNumber(count)}</h3>
       <p className="font-serif text-[14px] text-[#e65245]/60 mb-2" style={{ fontVariantNumeric: 'tabular-nums' }}>(+{added} sedan du kom in)</p>
       <p className="font-serif text-[16px] text-white/40"><span className="font-bold text-white/70">förskollärare</span> kunde anställas för ett helt år</p>
     </div>
@@ -66,7 +66,7 @@ function PoliceCard({ isVisible }) {
   return (
     <div className={`relative p-[25px] bg-[#1a0a0a] rounded-[16px] border border-white/5 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '100ms' }}>
 
-      <h3 className="text-[26px] text-[#e65245] mb-1" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatNumber(count)}</h3>
+      <h3 className="text-[32px] text-[#e65245] mb-1" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatNumber(count)}</h3>
       <p className="font-serif text-[14px] text-[#e65245]/60 mb-2" style={{ fontVariantNumeric: 'tabular-nums' }}>(+{added} sedan du kom in)</p>
       <p className="font-serif text-[16px] text-white/40">nya <span className="font-bold text-white/70">poliser</span> kunde anställas för ett helt år</p>
     </div>
@@ -95,7 +95,7 @@ function LunchCard({ isVisible }) {
   return (
     <div className={`relative p-[25px] bg-[#1a0a0a] rounded-[16px] border border-white/5 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '200ms' }}>
 
-      <h3 className="text-[26px] text-[#e65245] mb-1" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatNumber(count)}</h3>
+      <h3 className="text-[32px] text-[#e65245] mb-1" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatNumber(count)}</h3>
       <p className="font-serif text-[14px] text-[#e65245]/60 mb-2" style={{ fontVariantNumeric: 'tabular-nums' }}>(+{added} sedan du kom in)</p>
       <p className="font-serif text-[16px] text-white/40"><span className="font-bold text-white/70">skolluncher</span> varje dag ett helt läsår</p>
     </div>
@@ -124,7 +124,7 @@ function ElderCard({ isVisible }) {
   return (
     <div className={`relative p-[25px] bg-[#1a0a0a] rounded-[16px] border border-white/5 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '300ms' }}>
 
-      <h3 className="text-[26px] text-[#e65245] mb-1" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatNumber(count)}</h3>
+      <h3 className="text-[32px] text-[#e65245] mb-1" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatNumber(count)}</h3>
       <p className="font-serif text-[14px] text-[#e65245]/60 mb-2" style={{ fontVariantNumeric: 'tabular-nums' }}>(+{added} sedan du kom in)</p>
       <p className="font-serif text-[16px] text-white/40">platser på <span className="font-bold text-white/70">äldreboende</span> under ett helt år</p>
     </div>

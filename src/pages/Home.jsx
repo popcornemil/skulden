@@ -10,6 +10,7 @@ import ThreeColumns2 from '../components/ThreeColumns2'
 import TwoColumns2 from '../components/TwoColumns2'
 import ThreeColumns3 from '../components/ThreeColumns3'
 import DarkCard from '../components/DarkCard'
+import VideoSection from '../components/VideoSection'
 import Footer from '../components/Footer'
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
       <DarkCard />
       <AISection />
       <HubSection />
+      <VideoSection />
       <Footer />
     </>
   )

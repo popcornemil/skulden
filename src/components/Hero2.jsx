@@ -117,7 +117,7 @@ export default function Hero2() {
               <div className="flex items-baseline justify-center gap-3">
                 <FixedDigits
                   value={formatDebt(debt)}
-                  className="text-[36px] md:text-[56px] lg:text-[72px] text-[#e65245] leading-[1.05]"
+                  className="text-[42px] md:text-[72px] lg:text-[96px] text-[#e65245] leading-[1.05]"
                   style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, textShadow: '0 0 30px rgba(230,82,69,0.6), 0 0 60px rgba(230,82,69,0.3)' }}
                 />
                 <span className="text-[20px] md:text-[28px] text-[#e65245]/50 font-light" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800 }}>kr</span>
@@ -136,7 +136,7 @@ export default function Hero2() {
             <span className="block">
               <FixedDigits
                 value={formatKronor(increase) + ' kr'}
-                className="text-[24px] md:text-[36px] text-[#e65245] leading-tight"
+                className="text-[32px] md:text-[48px] text-[#e65245] leading-tight"
                 style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, textShadow: '0 0 20px rgba(230,82,69,0.4)' }}
               />
             </span>
@@ -151,19 +151,19 @@ export default function Hero2() {
         <div className={`grid grid-cols-2 md:grid-cols-4 gap-4 transition-all duration-1000 delay-500 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="bg-[#1a0a0a] p-[25px] rounded-[16px] border border-white/5">
             <p className="font-serif text-[10px] md:text-xs text-white/30 uppercase tracking-[0.15em] mb-2">Per sekund</p>
-            <p className="text-[26px] text-[#e65245]" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>300,61<span className="text-[#e65245]/50 text-[14px] ml-1">kr</span></p>
+            <p className="text-[32px] text-[#e65245]" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>300,61<span className="text-[#e65245]/50 text-[14px] ml-1">kr</span></p>
           </div>
           <div className="bg-[#1a0a0a] p-[25px] rounded-[16px] border border-white/5">
             <p className="font-serif text-[10px] md:text-xs text-white/30 uppercase tracking-[0.15em] mb-2">Per minut</p>
-            <p className="text-[26px] text-[#e65245]" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatDebt(RATE_PER_MIN)}<span className="text-[#e65245]/50 text-[14px] ml-1">kr</span></p>
+            <p className="text-[32px] text-[#e65245]" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatDebt(RATE_PER_MIN)}<span className="text-[#e65245]/50 text-[14px] ml-1">kr</span></p>
           </div>
           <div className="bg-[#1a0a0a] p-[25px] rounded-[16px] border border-white/5">
             <p className="font-serif text-[10px] md:text-xs text-white/30 uppercase tracking-[0.15em] mb-2">Per timme</p>
-            <p className="text-[26px] text-[#e65245]" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatDebt(RATE_PER_HOUR)}<span className="text-[#e65245]/50 text-[14px] ml-1">kr</span></p>
+            <p className="text-[32px] text-[#e65245]" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatDebt(RATE_PER_HOUR)}<span className="text-[#e65245]/50 text-[14px] ml-1">kr</span></p>
           </div>
           <div className="bg-[#1a0a0a] p-[25px] rounded-[16px] border border-white/5">
             <p className="font-serif text-[10px] md:text-xs text-white/30 uppercase tracking-[0.15em] mb-2">Per stockholmare</p>
-            <p className="text-[26px] text-[#e65245]" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatDebt(debt / STOCKHOLM_POP)}<span className="text-[#e65245]/50 text-[14px] ml-1">kr</span></p>
+            <p className="text-[32px] text-[#e65245]" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, fontVariantNumeric: 'tabular-nums', textShadow: '0 0 20px rgba(230,82,69,0.4)' }}>{formatDebt(debt / STOCKHOLM_POP)}<span className="text-[#e65245]/50 text-[14px] ml-1">kr</span></p>
           </div>
         </div>
 
