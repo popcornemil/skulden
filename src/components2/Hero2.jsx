@@ -82,44 +82,46 @@ export default function Hero2() {
       <div className="relative min-h-screen flex flex-col justify-center">
         <div className="absolute inset-0 bg-black" />
 
-        <div className="relative z-10 flex flex-col items-center justify-center gap-6 p-6 md:px-[50px] max-w-[1200px] mx-auto w-full">
-          <div className={`text-center transition-all duration-1000 delay-100 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <h2 className="font-heading text-[28px] md:text-[40px] font-light text-white leading-tight">Stockholms skuldklocka</h2>
-            <p className="font-serif text-[14px] md:text-[16px] text-white/60 mt-2">Stadens externa skuld ökar med ungefär 1 miljon kronor i timmen</p>
-          </div>
+        {/* Red glow at top */}
+        <div className="absolute inset-x-0 top-0 h-[300px]" style={{ background: 'radial-gradient(ellipse at top center, rgba(230,82,69,0.15) 0%, transparent 70%)' }} />
 
+        <div className="relative z-10 flex flex-col items-center justify-center gap-6 p-6 md:px-[50px] max-w-[1200px] mx-auto w-full">
           {/* Warning badge */}
-          <div className={`transition-all duration-1000 delay-200 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#e65245] border border-[#e65245] text-white text-xs font-medium uppercase tracking-[0.15em]">
+          <div className={`transition-all duration-1000 delay-100 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#e65245]/40 text-[#e65245] text-xs font-medium uppercase tracking-[0.15em]">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
               Realtidsdata
             </span>
           </div>
 
-          {/* Tagline */}
-          <div className={`transition-all duration-1000 delay-300 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <p className="font-serif text-xs md:text-sm font-medium text-white/40 text-center uppercase tracking-[0.2em]">
-              Total skuld just nu
-            </p>
+          {/* Title */}
+          <div className={`text-center transition-all duration-1000 delay-200 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <h2 className="font-heading text-[36px] md:text-[56px] lg:text-[72px] font-bold text-white leading-tight">Stockholms stads<br /><span className="text-[#e65245]">skuldklocka</span></h2>
+            <p className="font-serif text-[14px] md:text-[16px] text-white/50 mt-4">Stadens externa skuld ökar med ungefär 1 miljon kronor i timmen</p>
           </div>
 
-          {/* Debt counter */}
-          <div className={`transition-all duration-1000 delay-400 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <div className="flex items-baseline justify-center gap-3">
-              <FixedDigits
-                value={formatDebt(debt)}
-                className="text-[42px] md:text-[72px] lg:text-[96px] text-[#e65245] leading-[1.05]"
-                style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, textShadow: '0 0 30px rgba(230,82,69,0.6), 0 0 60px rgba(230,82,69,0.3)' }}
-              />
-              <span className="text-[20px] md:text-[28px] text-[#e65245]/50 font-light" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800 }}>kr</span>
+          {/* Debt counter card */}
+          <div className={`w-full max-w-[1000px] mt-4 transition-all duration-1000 delay-300 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className="rounded-[20px] border border-white/10 bg-[#111]/80 p-8 md:p-12">
+              <p className="font-serif text-xs md:text-sm font-medium text-white/40 text-center uppercase tracking-[0.2em] mb-4">
+                Total skuld just nu
+              </p>
+              <div className="flex items-baseline justify-center gap-3">
+                <FixedDigits
+                  value={formatDebt(debt)}
+                  className="text-[42px] md:text-[72px] lg:text-[96px] text-[#e65245] leading-[1.05]"
+                  style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800, textShadow: '0 0 30px rgba(230,82,69,0.6), 0 0 60px rgba(230,82,69,0.3)' }}
+                />
+                <span className="text-[20px] md:text-[28px] text-white/30 font-light" style={{ fontFamily: "'JetBrains Mono', monospace", fontWeight: 800 }}>kr</span>
+              </div>
+              <p className="font-serif text-[16px] md:text-[20px] text-[#e65245]/70 mt-3 text-center">
+                {formatBiljoner(debt)}
+              </p>
             </div>
-            <p className="font-serif text-[16px] md:text-[20px] text-[#e65245]/70 mt-2 text-center">
-              {formatBiljoner(debt)}
-            </p>
           </div>
 
           {/* CTA button */}
-          <div className={`flex justify-center transition-all duration-1000 delay-500 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className={`flex justify-center mt-2 transition-all duration-1000 delay-500 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <a
               href="#contact"
               className="group inline-block bg-[#e65245] text-white rounded-full hover:bg-[#d4453a] transition-all duration-500"

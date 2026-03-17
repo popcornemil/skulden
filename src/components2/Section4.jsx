@@ -96,7 +96,7 @@ export default function Section4() {
           {/* Left column — heading + body */}
           <div>
             <h4 className={`font-serif text-xs md:text-sm text-[#e65245] uppercase tracking-[0.25em] mb-4 text-left transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Stad för stad</h4>
-            <p className={`font-heading text-[48px] md:text-[80px] lg:text-[100px] font-light text-white leading-[0.85] uppercase text-left -ml-[4px] transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Ingen stad<br />går fri</p>
+            <p className={`font-heading text-[48px] md:text-[80px] lg:text-[100px] font-light text-white leading-[0.95] uppercase text-left -ml-[4px] transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Ingen stad<br />går fri</p>
             <p className={`font-serif text-[16px] text-white/60 mt-6 max-w-[520px] text-left transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Skulden är inte bara ett Stockholmsproblem. Från Göteborg till Malmö tickar klockan vidare. Varje kommun, varje stad, samma mönster — pengarna tar slut men skulden växer.</p>
           </div>
 

@@ -74,7 +74,7 @@ export default function TwoColumns() {
           {/* Left column — heading + body */}
           <div>
             <h4 className={`font-serif text-xs md:text-sm text-[#e65245] uppercase tracking-[0.25em] mb-4 text-left transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Skuldklockan tickar</h4>
-            <p className={`font-heading text-[48px] md:text-[80px] lg:text-[100px] font-light text-white leading-[0.85] uppercase text-left -ml-[4px] transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Medan du<br />tittade hit<br />växte skulden</p>
+            <p className={`font-heading text-[48px] md:text-[80px] lg:text-[100px] font-light text-white leading-[1.05] uppercase text-left -ml-[4px] transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Medan du<br />tittade hit<br />växte skulden</p>
             <p className={`font-serif text-[16px] text-white/60 mt-6 max-w-[520px] text-left transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Skulden växer varje sekund. Här ser du exakt hur snabbt. Varje krona som läggs på hög är en krona som framtida generationer tvingas betala tillbaka. Det är dags att kräva ansvar. Sätt press på politikerna.</p>
           </div>
 
